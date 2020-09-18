@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.constraintLayout
+    api rootProject.ext.dependencies.junit
+    androidTestImplementation rootProject.ext.dependencies.testJunit
+    androidTestImplementation rootProject.ext.dependencies.testEspressoCore
+    api rootProject.ext.dependencies.design
+
+    //AutoDispose解决RxJava内存泄漏
+    api rootProject.ext.dependencies.uberAutoDispose
+    api rootProject.ext.dependencies.uberAutoDisposeAndroid
+    api rootProject.ext.dependencies.uberAutoDisposeAndroidArchcomponents
+
+    //    网络&数据相关
+    api rootProject.ext.dependencies.retrofit2
+    api rootProject.ext.dependencies.retrofitConverterGson
+    api rootProject.ext.dependencies.rxjava2
+    api rootProject.ext.dependencies.rxandroid
+    api rootProject.ext.dependencies.retrofit2AdapterRxjava2
+    api rootProject.ext.dependencies.okHttp
+    api rootProject.ext.dependencies.okHttpLoggingInterceptorVersion
+    api rootProject.ext.dependencies.gson
+}

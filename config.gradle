@@ -1,0 +1,75 @@
+ext {
+
+    signConfig = [
+
+    ]
+
+    android = [
+            compileSdkVersion: 29,
+            buildToolsVersion: "30.0.2",
+            applicationId    : "com.library",
+            minSdkVersion    : 21,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    version = [
+            appcompatVersion              : "1.1.0",
+            constraintLayoutVersion       : "1.1.3",
+            junitVersion                  : "4.12",
+            testJunitVersion              : "1.1.1",
+            testEspressoCoreVersion       : "3.2.0",
+
+            designVersion                 : "29.0.0",
+            webSocketVersion              : "1.4.0",
+            eventBusVersion               : "3.1.1",
+            androidUtilCodeVersion        : "1.29.0",
+            uberVersion                   : "0.7.0",
+            glideVersion                  : "4.5.0",
+            pickerViewVersion             : "4.1.9",
+            rxpermissionVersion           : "0.9.5@aar",
+            smartRefreshVersion           : "2.0.1",
+
+
+            retrofit2Version              : "2.6.2",
+            retrofitConverterGsonVersion  : "2.1.0",
+            rxjava2Version                : "2.2.12",
+            rxandroidVersion              : "2.1.1",
+            retrofit2AdapterRxjava2Version: "2.6.2",
+            okHttpVersion                 : "3.12.1",
+            gsonVersion                   : "2.8.6"
+    ]
+
+    dependencies = [
+            appcompat                           : "androidx.appcompat:appcompat:$version.appcompatVersion",
+            constraintLayout                    : "androidx.constraintlayout:constraintlayout:$version.constraintLayoutVersion",
+            junit                               : "junit:junit:$version.junitVersion",
+            testJunit                           : "androidx.test.ext:junit:$version.testJunitVersion",
+            testEspressoCore                    : "androidx.test.espresso:espresso-core:$version.testEspressoCoreVersion",
+
+            webSocket                           : "org.java-websocket:Java-WebSocket:$version.webSocketVersion",
+            eventBus                            : "org.greenrobot:eventbus:$version.eventBusVersion",
+            androidUtilCode                     : "com.blankj:utilcodex:$version.androidUtilCodeVersion",
+            uberAutoDispose                     : "com.uber.autodispose:autodispose:$version.uberVersion",
+            uberAutoDisposeAndroid              : "com.uber.autodispose:autodispose-android:$version.uberVersion",
+            uberAutoDisposeAndroidArchcomponents: "com.uber.autodispose:autodispose-android-archcomponents:$version.uberVersion",
+            design                              : "com.android.support:design:$version.designVersion",
+            banner                              : "com.youth.banner:banner:1.4.10",
+            glide                               : "com.github.bumptech.glide:glide:$version.glideVersion",
+            glideCompiler                       : "com.github.bumptech.glide:compiler:$version.glideVersion",
+            pickerView                          : "com.contrarywind:Android-PickerView:$version.pickerViewVersion",
+            rxPermission                        : "com.tbruyelle.rxpermissions2:rxpermissions:$version.rxpermissionVersion",
+            smartRefresh                        : "com.scwang.smart:refresh-layout-kernel:$version.smartRefreshVersion",
+            smartRefreshClassics                        : "com.scwang.smart:refresh-header-classics:$version.smartRefreshVersion",
+
+            retrofit2                           : "com.squareup.retrofit2:retrofit:$version.retrofit2Version",
+            retrofitConverterGson               : "com.squareup.retrofit2:converter-gson:$version.retrofitConverterGsonVersion",
+            rxjava2                             : "io.reactivex.rxjava2:rxjava:$version.rxjava2Version",
+            rxandroid                           : "io.reactivex.rxjava2:rxandroid:$version.rxandroidVersion",
+            retrofit2AdapterRxjava2             : "com.squareup.retrofit2:adapter-rxjava2:$version.retrofit2AdapterRxjava2Version",
+            okHttp                              : "com.squareup.okhttp3:okhttp:$version.okHttpVersion",
+            okHttpLoggingInterceptorVersion     : "com.squareup.okhttp3:logging-interceptor:$version.okHttpVersion",
+            gson                                : "com.google.code.gson:gson:$version.gsonVersion"
+    ]
+}

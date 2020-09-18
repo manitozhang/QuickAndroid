@@ -1,0 +1,3 @@
+rootProject.name='LibraryCollection'
+include ':app'
+include ':basecommon'
