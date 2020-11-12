@@ -5,7 +5,7 @@ package com.common.constants;
  */
 public class HttpConstants {
 
-    public static final String BASE_URL = "http://localhost:8080/";
+    public static final String BASE_URL = "http://119.45.229.87:1271/";
     //成功码
     public static final int CODE_SUCCESS = 10000;
     //链接超时时间

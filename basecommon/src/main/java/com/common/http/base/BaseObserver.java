@@ -45,21 +45,23 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
 
     /**
      * 需要弹窗,实例化此方法
+     *
      * @param context
      */
     public BaseObserver(Context context) {
         this.context = context;
-        if (loadingDialog == null)
-            new AlertDialog.Builder(context);
-        loadingDialog.show();
+        //弹窗在这里写,每次调用网络都实现这个方法
+//        if (loadingDialog == null)
+//            new AlertDialog.Builder(context);
+//        loadingDialog.show();
     }
 
     @Override
     public void onNext(BaseResponse<T> response) {
         if (loadingDialog != null)
             loadingDialog.dismiss();
+        onSuccess(response.getData());
         if (response.isSuccess()) {
-            onSuccess(response.getData());
             onSuccess(response);
         } else {
             ToastUtils.showShort(response.getMsg());

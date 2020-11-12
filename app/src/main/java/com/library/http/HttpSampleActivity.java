@@ -67,7 +67,7 @@ public class HttpSampleActivity extends BaseActivity {
      */
     public void btnGet(View view) {
         XRetrofit.getApi()
-                .testGet(Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etUsername)))
+                .testGet(Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etPassword)))
                 .compose(RxJavaHelper.observeOnMainThread())
                 .subscribe(new BaseObserver<ExampleBean>() {
                     @Override
@@ -84,7 +84,7 @@ public class HttpSampleActivity extends BaseActivity {
      */
     public void btnPost(View view) {
         XRetrofit.getApi()
-                .testPost(Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etUsername)))
+                .testPost(Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etPassword)))
                 .compose(RxJavaHelper.observeOnMainThread())
                 .subscribe(new BaseObserver() {
                     @Override
@@ -106,7 +106,7 @@ public class HttpSampleActivity extends BaseActivity {
      */
     public void btnPut(View view) {
         XRetrofit.getApi()
-                .testPut(Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etUsername)))
+                .testPut(Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etPassword)))
                 .compose(RxJavaHelper.observeOnMainThread())
                 .subscribe(new BaseObserver() {
                     @Override
@@ -128,7 +128,7 @@ public class HttpSampleActivity extends BaseActivity {
      */
     public void btnDelete(View view) {
         XRetrofit.getApi()
-                .testDelete(Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etUsername)))
+                .testDelete(Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etPassword)))
                 .compose(RxJavaHelper.observeOnMainThread())
                 .subscribe(new BaseObserver<ExampleBean>() {
                     @Override
@@ -151,7 +151,7 @@ public class HttpSampleActivity extends BaseActivity {
     public void btnPostJson(View view) {
         XRetrofit.getApi()
                 .testPostJson(RequestBodyHelper.getRequestBody
-                        (Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etUsername))))
+                        (Mobile.commonParamsMap(ParamUtil.getEditStr(etUsername), ParamUtil.getEditStr(etPassword))))
                 .compose(RxJavaHelper.observeOnMainThread())
                 .subscribe(new BaseObserver<ExampleBean>() {
                     @Override
