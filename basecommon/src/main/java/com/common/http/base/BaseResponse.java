@@ -1,6 +1,6 @@
 package com.common.http.base;
 
-import com.common.http.HttpConstants;
+import com.common.constants.HttpConstants;
 
 /**
  * @Author: 张鹏飞
@@ -42,4 +42,12 @@ public class BaseResponse<T> {
         return code == HttpConstants.CODE_SUCCESS;
     }
 
+    @Override
+    public String toString() {
+        return "BaseResponse{" +
+                "code=" + code +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }

@@ -23,4 +23,20 @@ public class Mobile {
         return map;
     }
 
+    /**
+     * 公共的map
+     *
+     * @param username
+     * @param password
+     * @return
+     */
+    public static HashMap<String, Object> commonParamsMap(String username, String password) {
+        HashMap<String, Object> map = new HashMap<>();
+        //用户名的参数key: username
+        map.put("username", username);
+        //密码的参数key: password
+        map.put("password", password);
+        return map;
+    }
+
 }

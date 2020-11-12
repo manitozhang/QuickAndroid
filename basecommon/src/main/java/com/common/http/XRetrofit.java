@@ -1,6 +1,7 @@
 package com.common.http;
 
 
+import com.common.constants.HttpConstants;
 import com.common.http.api.ApiService;
 import com.common.http.intercept.HttpIntercept;
 

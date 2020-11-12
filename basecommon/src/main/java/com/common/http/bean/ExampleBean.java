@@ -5,44 +5,34 @@ package com.common.http.bean;
  * @Date: 2020/9/3
  * @Email: 1271396448@qq.com
  * <p>
- * @Desc:
+ * @Desc: 返回的整个的信息 sample: {"code":10000,"msg":"请求成功","data":{"username":"用户名","password":"密码"}}  只需要写data里面的就可以
  */
 public class ExampleBean {
 
-    private long id;
-    private long userId;
-    private String title;
-    private String content;
+    private String username;
+    private String password;
 
-    public long getId() {
-        return id;
+    public String getUsername() {
+        return username;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public long getUserId() {
-        return userId;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserId(long userId) {
-        this.userId = userId;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    @Override
+    public String toString() {
+        return "ExampleBean{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
