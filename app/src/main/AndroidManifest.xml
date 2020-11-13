@@ -3,7 +3,8 @@
     package="com.library">
 
     <application>
-        <activity android:name=".mainpage.MainPageActivity"></activity>
+        <activity android:name=".lazyload.LazyLoadActivity"></activity>
+        <activity android:name=".mainpage.MainPageActivity" />
         <activity android:name=".http.HttpSampleActivity" />
         <activity android:name=".testmvp.LoginActivity" />
         <activity android:name=".MainActivity">

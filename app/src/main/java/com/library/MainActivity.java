@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.common.base.BaseActivity;
 import com.library.http.HttpSampleActivity;
+import com.library.lazyload.LazyLoadActivity;
 import com.library.mainpage.MainPageActivity;
 
 public class MainActivity extends BaseActivity {
@@ -33,6 +34,10 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    /**
+     * 首页框架
+     * @param view
+     */
     public void btnMainPage(View view){
         startActivity(new Intent(this, MainPageActivity.class));
     }
@@ -44,5 +49,13 @@ public class MainActivity extends BaseActivity {
      */
     public void btnHttp(View view) {
         startActivity(new Intent(this, HttpSampleActivity.class));
+    }
+
+    /**
+     * 懒加载
+     * @param view
+     */
+    public void btnLazyLoad(View view) {
+        startActivity(new Intent(this, LazyLoadActivity.class));
     }
 }

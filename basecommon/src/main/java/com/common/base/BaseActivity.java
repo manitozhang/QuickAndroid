@@ -94,7 +94,7 @@ public abstract class BaseActivity
     /**
      * 是否允许当前点击输入框,再次点击空白处,隐藏软键盘
      * 默认允许
-     *
+     * 可实现该方法返回false 代表不允许
      * @return true
      */
     public boolean useHiddenSoftInput() {
