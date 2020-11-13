@@ -6,15 +6,18 @@
 + 常用的一些组件
 + 网络请求全示例
 
- ## 快速引导
+ ## 快速引导 
  + [首页框架]( "https://github.com/manitozhang/LibraryCollection/blob/master/app/src/main/java/com/library/mainpage/MainPageActivity.java")
-![图片](https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png)
+
+<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="270px" height="480px" alt="首页框架" align=center>
 
  + [网络请求示例]( "https://github.com/manitozhang/LibraryCollection/blob/master/app/src/main/java/com/library/http/HttpSampleActivity.java")
-![图片](https://library-collection.oss-cn-beijing.aliyuncs.com/static/HttpSample.png)
+
+<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/HttpSample.png" width="270px" height="480px" alt="网络请求示例" align=center>
 
  + [Fragment懒加载]( "https://github.com/manitozhang/LibraryCollection/blob/master/app/src/main/java/com/library/lazyload/LazyLoadActivity.java")
-![图片](https://library-collection.oss-cn-beijing.aliyuncs.com/static/LazyLoad.png)
+
+<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="270px" height="480px" alt="Fragment懒加载" align=center>
 
 
 ### 持续更新中
