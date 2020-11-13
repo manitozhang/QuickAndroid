@@ -24,7 +24,6 @@ ext {
             designVersion                 : "29.0.0",
             webSocketVersion              : "1.4.0",
             eventBusVersion               : "3.1.1",
-            androidUtilCodeVersion        : "1.29.0",
             uberVersion                   : "0.7.0",
             glideVersion                  : "4.5.0",
             pickerViewVersion             : "4.1.9",
@@ -51,7 +50,6 @@ ext {
 
             webSocket                           : "org.java-websocket:Java-WebSocket:$version.webSocketVersion",
             eventBus                            : "org.greenrobot:eventbus:$version.eventBusVersion",
-            androidUtilCode                     : "com.blankj:utilcodex:$version.androidUtilCodeVersion",
             uberAutoDispose                     : "com.uber.autodispose:autodispose:$version.uberVersion",
             uberAutoDisposeAndroid              : "com.uber.autodispose:autodispose-android:$version.uberVersion",
             uberAutoDisposeAndroidArchcomponents: "com.uber.autodispose:autodispose-android-archcomponents:$version.uberVersion",

@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
+import com.blankj.utilcode.util.ConvertUtils;
 import com.common.base.BaseActivity;
+import com.common.util.BitmapUtil;
 import com.library.http.HttpSampleActivity;
 import com.library.lazyload.LazyLoadActivity;
 import com.library.mainpage.MainPageActivity;
@@ -21,7 +24,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initViewIds() {
-
+        Button btnView = findViewById(R.id.btnView);
+        ConvertUtils.view2Bitmap(btnView);
     }
 
     @Override
@@ -57,5 +61,14 @@ public class MainActivity extends BaseActivity {
      */
     public void btnLazyLoad(View view) {
         startActivity(new Intent(this, LazyLoadActivity.class));
+    }
+
+    public void btnCommonToolbar(View view) {
+    }
+
+    public void btnGlideClip(View view) {
+    }
+
+    public void btnDownload(View view) {
     }
 }

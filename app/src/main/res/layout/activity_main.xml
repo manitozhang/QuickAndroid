@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btnView"
         android:onClick="btnMainPage"
         android:text="首页框架"
         android:layout_width="match_parent"
@@ -22,6 +23,21 @@
     <Button
         android:onClick="btnLazyLoad"
         android:text="Fragment懒加载"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:onClick="btnCommonToolbar"
+        android:text="封装的标题栏"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:onClick="btnGlideClip"
+        android:text="Glide各种裁剪"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:onClick="btnDownload"
+        android:text="文件下载"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
