@@ -21,7 +21,7 @@
 
  + [Fragment懒加载](https://github.com/manitozhang/LibraryCollection/blob/master/app/src/main/java/com/library/lazyload/LazyLoadActivity.java)
 
-<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="135px" height="240px" alt="Fragment懒加载" align=center>
+<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/LazyLoad.png" width="135px" height="240px" alt="Fragment懒加载" align=center>
 
 
 ### 持续更新中
