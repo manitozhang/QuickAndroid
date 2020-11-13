@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.common.library.eventbus.EventBus;
-import com.common.library.utilcode.util.BarUtils;
 
 
 /**

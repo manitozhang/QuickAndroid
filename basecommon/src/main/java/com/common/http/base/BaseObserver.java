@@ -6,9 +6,9 @@ import android.net.ParseException;
 
 import androidx.appcompat.app.AlertDialog;
 
+import com.blankj.utilcode.util.NetworkUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.common.R;
-import com.common.library.utilcode.util.NetworkUtils;
-import com.common.library.utilcode.util.ToastUtils;
 import com.google.gson.JsonParseException;
 
 import org.json.JSONException;

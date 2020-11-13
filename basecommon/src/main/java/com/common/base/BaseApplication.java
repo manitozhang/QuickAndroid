@@ -3,7 +3,7 @@ package com.common.base;
 import android.app.Application;
 import android.view.Gravity;
 
-import com.common.library.utilcode.util.ToastUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.common.util.SpUtil;
 
 public class BaseApplication extends Application {
@@ -16,7 +16,8 @@ public class BaseApplication extends Application {
     }
 
     private void initToast(){
-        ToastUtils.setGravity(Gravity.CENTER,0,0);
+        ToastUtils toastUtils = ToastUtils.getDefaultMaker();
+        toastUtils.setGravity(Gravity.CENTER,0,0);
     }
 
 }

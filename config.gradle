@@ -30,6 +30,7 @@ ext {
             pickerViewVersion             : "4.1.9",
             rxpermissionVersion           : "0.9.5@aar",
             smartRefreshVersion           : "2.0.1",
+            androidUtilCodeVersion        : "1.30.4",
 
 
             retrofit2Version              : "2.6.2",
@@ -61,7 +62,8 @@ ext {
             pickerView                          : "com.contrarywind:Android-PickerView:$version.pickerViewVersion",
             rxPermission                        : "com.tbruyelle.rxpermissions2:rxpermissions:$version.rxpermissionVersion",
             smartRefresh                        : "com.scwang.smart:refresh-layout-kernel:$version.smartRefreshVersion",
-            smartRefreshClassics                        : "com.scwang.smart:refresh-header-classics:$version.smartRefreshVersion",
+            smartRefreshClassics                : "com.scwang.smart:refresh-header-classics:$version.smartRefreshVersion",
+            androidUtilCode                     : "com.blankj:utilcodex:$version.androidUtilCodeVersion",
 
             retrofit2                           : "com.squareup.retrofit2:retrofit:$version.retrofit2Version",
             retrofitConverterGson               : "com.squareup.retrofit2:converter-gson:$version.retrofitConverterGsonVersion",

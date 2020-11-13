@@ -13,7 +13,8 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.TextUtils;
 
-import com.common.library.utilcode.util.Utils;
+
+import com.blankj.utilcode.util.Utils;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;

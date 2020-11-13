@@ -34,34 +34,6 @@
         <meta-data
             android:name="design_height_in_dp"
             android:value="640" />
-
-        <!--        启动当前线程透明的Activity-->
-
-        <activity
-            android:name=".library.utilcode.util.UtilsTransActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:multiprocess="true"
-            android:theme="@style/ActivityTranslucent"
-            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
-
-        <!--        7.0相机适配-->
-        <provider
-            android:name=".library.utilcode.util.UtilsFileProvider"
-            android:authorities="${applicationId}.utilcode.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/util_code_provider_paths" />
-        </provider>
-
-        <service
-            android:name=".library.utilcode.util.MessengerUtils$ServerService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="${applicationId}.messenger" />
-            </intent-filter>
-        </service>
     </application>
 
 </manifest>
