@@ -8,6 +8,8 @@
     tools:context=".http.HttpSampleActivity">
 
     <EditText
+        android:textColor="@color/colorMain"
+        android:text="admin"
         android:id="@+id/et_username"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -16,6 +18,8 @@
         android:textSize="15sp" />
 
     <EditText
+        android:textColor="@color/colorMain"
+        android:text="123456"
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -24,6 +28,7 @@
         android:textSize="15sp" />
 
     <Button
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="btnGet"
