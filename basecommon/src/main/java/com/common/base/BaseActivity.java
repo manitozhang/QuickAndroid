@@ -26,7 +26,7 @@ public abstract class BaseActivity
         extends AppCompatActivity {
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         if (savedInstanceState != null) {
             //如果系统回收掉了当前的Activity,但是保留了Fragment

@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.common.base.BaseActivity;
 import com.library.http.HttpSampleActivity;
+import com.library.mainpage.MainPageActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -30,6 +31,10 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initData(@Nullable Bundle savedInstanceState) {
 
+    }
+
+    public void btnMainPage(View view){
+        startActivity(new Intent(this, MainPageActivity.class));
     }
 
     /**

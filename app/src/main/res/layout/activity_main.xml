@@ -4,11 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Button
+        android:onClick="btnMainPage"
+        android:text="首页框架"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
         android:onClick="btnHttp"
-        android:text="网络请求相关"
+        android:text="网络请求示例"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
