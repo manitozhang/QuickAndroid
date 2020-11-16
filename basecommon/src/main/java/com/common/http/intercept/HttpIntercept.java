@@ -12,7 +12,7 @@ import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc: 网络拦截器

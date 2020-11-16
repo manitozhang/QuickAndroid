@@ -36,6 +36,10 @@ dependencies {
     androidTestApi rootProject.ext.dependencies.testEspressoCore
     api rootProject.ext.dependencies.design
     api rootProject.ext.dependencies.androidUtilCode
+    api rootProject.ext.dependencies.glide
+    annotationProcessor rootProject.ext.dependencies.glideCompiler
+
+    api rootProject.ext.dependencies.fileDownloader
 
     //AutoDispose解决RxJava内存泄漏
     api rootProject.ext.dependencies.uberAutoDispose

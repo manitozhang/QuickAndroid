@@ -8,7 +8,7 @@ import com.uber.autodispose.AutoDisposeConverter;
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc:

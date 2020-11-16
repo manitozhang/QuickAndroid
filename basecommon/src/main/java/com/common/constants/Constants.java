@@ -1,7 +1,7 @@
 package com.common.constants;
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * @Date: 2020/11/12
  * <p>

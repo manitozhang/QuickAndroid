@@ -3,7 +3,9 @@
     package="com.library">
 
     <application>
-        <activity android:name=".toolbar.CommonToolbarActivity"></activity>
+        <activity android:name=".filedownload.FileDownloadActivity"></activity>
+        <activity android:name=".glide.GlideUseActivity" />
+        <activity android:name=".toolbar.CommonToolbarActivity" />
         <activity android:name=".lazyload.LazyLoadActivity" />
         <activity android:name=".mainpage.MainPageActivity" />
         <activity android:name=".http.HttpSampleActivity" />

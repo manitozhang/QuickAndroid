@@ -3,7 +3,7 @@ package com.common.base.mvp;
 import com.uber.autodispose.AutoDisposeConverter;
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc:

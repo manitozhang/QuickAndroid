@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".glide.GlideUseActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="默认加载"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/iv_default"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="加载圆图"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/iv_circle"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="加载圆角图"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/iv_corner"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+
+</LinearLayout>

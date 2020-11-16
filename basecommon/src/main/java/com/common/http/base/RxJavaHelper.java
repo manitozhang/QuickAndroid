@@ -7,7 +7,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc: Rxjava2线程切换操作封装

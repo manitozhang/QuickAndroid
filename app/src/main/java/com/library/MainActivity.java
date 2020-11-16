@@ -11,6 +11,8 @@ import android.widget.Button;
 import com.blankj.utilcode.util.ConvertUtils;
 import com.common.base.BaseActivity;
 import com.common.util.BitmapUtil;
+import com.library.filedownload.FileDownloadActivity;
+import com.library.glide.GlideUseActivity;
 import com.library.http.HttpSampleActivity;
 import com.library.lazyload.LazyLoadActivity;
 import com.library.mainpage.MainPageActivity;
@@ -70,9 +72,19 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(this, CommonToolbarActivity.class));
     }
 
+    /**
+     * Glide操作
+     * @param view
+     */
     public void btnGlideClip(View view) {
+        startActivity(new Intent(this, GlideUseActivity.class));
     }
 
+    /**
+     * 文件下载
+     * @param view
+     */
     public void btnDownload(View view) {
+        startActivity(new Intent(this, FileDownloadActivity.class));
     }
 }

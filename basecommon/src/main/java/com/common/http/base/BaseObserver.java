@@ -22,7 +22,7 @@ import io.reactivex.disposables.Disposable;
 import retrofit2.HttpException;
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc: 实现Observer 来统一处理,拦截

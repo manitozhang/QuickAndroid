@@ -5,6 +5,7 @@ import android.view.Gravity;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.common.util.SpUtil;
+import com.liulishuo.filedownloader.FileDownloader;
 
 public class BaseApplication extends Application {
 
@@ -13,6 +14,7 @@ public class BaseApplication extends Application {
         super.onCreate();
         SpUtil.init(this);
         initToast();
+        FileDownloader.setup(this);
     }
 
     private void initToast(){

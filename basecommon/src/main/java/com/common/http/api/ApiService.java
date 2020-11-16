@@ -23,7 +23,7 @@ import retrofit2.http.PartMap;
 import retrofit2.http.QueryMap;
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc: BaseResponse<T> 是后台返回的数据,T代表Data里面的数据 无数据返回可直接写BaseReponse

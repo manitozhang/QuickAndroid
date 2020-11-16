@@ -15,6 +15,7 @@ import android.text.TextUtils;
 
 
 import com.blankj.utilcode.util.Utils;
+import com.common.constants.Constants;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
@@ -167,8 +168,8 @@ public class BitmapUtil {
     }
 
     public static File compressImage(Context context, Uri imageUri, float maxWidth, float maxHeight,
-                              Bitmap.CompressFormat compressFormat, Bitmap.Config bitmapConfig,
-                              int quality, String parentPath, String prefix, String fileName) {
+                                     Bitmap.CompressFormat compressFormat, Bitmap.Config bitmapConfig,
+                                     int quality, String parentPath, String prefix, String fileName) {
         FileOutputStream out = null;
         String filename = generateFilePath(context, parentPath, imageUri, compressFormat.name().toLowerCase(), prefix, fileName);
         try {
@@ -241,7 +242,7 @@ public class BitmapUtil {
         boolean sdCardExist = Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED); // 判断sd卡是否存在
         if (sdCardExist) {
             sdDir = Environment.getExternalStorageDirectory();// 获取跟目录
-        }else {
+        } else {
             sdDir = Utils.getApp().getFilesDir();
         }
         return sdDir.toString();
@@ -271,6 +272,10 @@ public class BitmapUtil {
         intent.setData(uri);
         context.sendBroadcast(intent);
         file.delete();
+    }
+
+    public static String getFileStoragePath() {
+        return BitmapUtil.getSDPath() + Constants.SD_ROOT_DIR;
     }
 
 

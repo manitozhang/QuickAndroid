@@ -196,7 +196,11 @@ public class HttpSampleActivity extends BaseActivity {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_PICK);
         intent.setType("image/*");
-        startActivityForResult(intent, 101);
+        try {
+            startActivityForResult(intent, 101);
+        }catch (Exception e){
+            ToastUtils.showShort("该设备不支持相册功能");
+        }
     }
 
     @Override

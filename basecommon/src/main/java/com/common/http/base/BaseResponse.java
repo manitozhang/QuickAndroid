@@ -3,7 +3,7 @@ package com.common.http.base;
 import com.common.constants.HttpConstants;
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc: 数据统一返回格式

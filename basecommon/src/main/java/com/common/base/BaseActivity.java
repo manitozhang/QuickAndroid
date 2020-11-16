@@ -17,7 +17,7 @@ import com.common.library.eventbus.EventBus;
 
 
 /**
- * @Author: https://github.com/manitozhang
+ * @Author: 张鹏飞
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc: Activity基类
