@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_toolbar_root"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_left_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tv_toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
+
+
+        <FrameLayout
+            android:id="@+id/fl_toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_right_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap">
+
+        <TextView
+            android:id="@+id/tv_toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="10dp" />
+
+        <FrameLayout
+            android:id="@+id/fl_toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black" />
+
+</RelativeLayout>

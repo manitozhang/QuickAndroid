@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--CommonRecyclerView-->
+    <declare-styleable name="CommonRecyclerView">
+        <!--        横向滑动速率-->
+        <attr name="recyclerSpeedX" format="float" />
+        <!--        纵向滑动速率-->
+        <attr name="recyclerSpeedY" format="float" />
+    </declare-styleable>
+
+    <!--自定义Toolbar控件-->
+    <declare-styleable name="CommonToolbar">
+        <!--背景颜色-->
+        <attr name="toolbarBgColor" format="reference" />
+        <!--标题文字-->
+        <attr name="toolbarTitle" format="string" />
+        <!--标题文字颜色-->
+        <attr name="toolbarTitleColor" format="color" />
+        <!--左边图片-->
+        <attr name="toolbarLeftImg" format="reference" />
+        <!--左边文字-->
+        <attr name="toolbarLeftText" format="string" />
+        <!--左边文字颜色-->
+        <attr name="toolbarLeftTextColor" format="color" />
+        <!--右边图片-->
+        <attr name="toolbarRightImg" format="reference" />
+        <!--右边文字-->
+        <attr name="toolbarRightText" format="string" />
+        <!--右边文字颜色-->
+        <attr name="toolbarRightTextColor" format="color" />
+        <!--左边布局类型-->
+        <attr name="toolbarLeftType" format="enum">
+            <!--什么都没有-->
+            <enum name="NONE" value="-1" />
+            <!--文字-->
+            <enum name="TEXT" value="1" />
+            <!--图片-->
+            <enum name="IMAGE" value="2" />
+            <!--一个布局-->
+            <enum name="VIEW" value="3" />
+        </attr>
+        <!--右边布局类型-->
+        <attr name="toolbarRightType" format="enum">
+            <!--什么都没有-->
+            <enum name="NONE" value="-1" />
+            <!--文字-->
+            <enum name="TEXT" value="1" />
+            <!--图片-->
+            <enum name="IMAGE" value="2" />
+            <!--一个布局-->
+            <enum name="VIEW" value="3" />
+        </attr>
+        <!--是否显示分割线-->
+        <attr name="viewLineIsVisiblity" format="enum">
+            <enum name="GONE" value="0" />
+            <enum name="VISIBLE" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

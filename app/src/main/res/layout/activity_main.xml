@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"/>
     <Button
         android:onClick="btnCommonToolbar"
-        android:text="封装的标题栏"
+        android:text="公共标题栏"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <Button

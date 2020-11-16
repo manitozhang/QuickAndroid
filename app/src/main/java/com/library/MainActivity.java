@@ -14,6 +14,7 @@ import com.common.util.BitmapUtil;
 import com.library.http.HttpSampleActivity;
 import com.library.lazyload.LazyLoadActivity;
 import com.library.mainpage.MainPageActivity;
+import com.library.toolbar.CommonToolbarActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -24,8 +25,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initViewIds() {
-        Button btnView = findViewById(R.id.btnView);
-        ConvertUtils.view2Bitmap(btnView);
     }
 
     @Override
@@ -63,7 +62,12 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(this, LazyLoadActivity.class));
     }
 
+    /**
+     * 封装的标题栏
+     * @param view
+     */
     public void btnCommonToolbar(View view) {
+        startActivity(new Intent(this, CommonToolbarActivity.class));
     }
 
     public void btnGlideClip(View view) {
