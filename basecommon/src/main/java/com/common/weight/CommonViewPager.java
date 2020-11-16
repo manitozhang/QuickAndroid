@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
 
 /**
- * @Author: 张鹏飞
+ * @Author: https://github.com/manitozhang
  * @Email: 1271396448@qq.com
  * @Date: 2020/11/13
  * <p>

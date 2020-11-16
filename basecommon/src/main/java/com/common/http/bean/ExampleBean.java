@@ -1,7 +1,7 @@
 package com.common.http.bean;
 
 /**
- * @Author: 张鹏飞
+ * @Author: https://github.com/manitozhang
  * @Date: 2020/9/3
  * @Email: 1271396448@qq.com
  * <p>

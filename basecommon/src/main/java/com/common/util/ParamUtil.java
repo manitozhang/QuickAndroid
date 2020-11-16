@@ -3,7 +3,7 @@ package com.common.util;
 import android.widget.EditText;
 
 /**
- * @Author: 张鹏飞
+ * @Author: https://github.com/manitozhang
  * @Email: 1271396448@qq.com
  * @Date: 2020/8/30  13:27
  * <p>

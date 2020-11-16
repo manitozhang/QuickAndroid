@@ -17,7 +17,7 @@ import com.common.library.eventbus.Subscribe;
 import java.util.Objects;
 
 /**
- * @Author: 张鹏飞
+ * @Author: https://github.com/manitozhang
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc: Fragment基类

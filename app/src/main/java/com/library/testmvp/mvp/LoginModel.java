@@ -11,7 +11,7 @@ import java.util.HashMap;
 import io.reactivex.Observable;
 
 /**
- * @Author: 张鹏飞
+ * @Author: https://github.com/manitozhang
  * @Email: 1271396448@qq.com
  * <p>
  * @Desc:

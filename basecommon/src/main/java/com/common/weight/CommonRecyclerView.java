@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.common.R;
 
 /**
- * @Author: 张鹏飞
+ * @Author: https://github.com/manitozhang
  * * @Email: 1271396448@qq.com
  * @Date: 2019/6/27 3:19 PM
  * <p>
