@@ -25,7 +25,7 @@ ext {
             webSocketVersion              : "1.4.0",
             eventBusVersion               : "3.1.1",
             uberVersion                   : "0.7.0",
-            glideVersion                  : "4.5.0",
+            glideVersion                  : "4.9.0",
             pickerViewVersion             : "4.1.9",
             rxpermissionVersion           : "0.9.5@aar",
             smartRefreshVersion           : "2.0.1",
