@@ -89,7 +89,7 @@ public class FileDownloadActivity extends BaseActivity {
     }
 
     /**
-     * 开始下载
+     * 暂停下载
      *
      * @param view
      */

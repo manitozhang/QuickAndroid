@@ -87,6 +87,9 @@ public class FileDownloadHelper {
         baseDownloadTask.start();
     }
 
+    /**
+     * 暂停下载
+     */
     public void pause(){
         baseDownloadTask.pause();
     }
