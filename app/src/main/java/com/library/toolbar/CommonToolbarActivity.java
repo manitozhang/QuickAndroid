@@ -18,9 +18,17 @@ import com.library.R;
 public class CommonToolbarActivity extends BaseActivity {
 
     private CommonToolbar toolbar;
-    private boolean colorFlag = true;
-    private boolean viewLineFlag = true;
+    private boolean titleColorFlag = true;
+    private boolean dividerFlag = true;
+    private boolean dividerColorFlag = true;
     private boolean bgColorFlag = true;
+    private boolean titleSizeFlag = true;
+    private boolean leftColorFlag = true;
+    private boolean rightColorFlag = true;
+    private boolean rightSizeFlag = true;
+    private boolean leftSizeFlag = true;
+    private boolean leftImgWidthHeightFlag = true;
+    private boolean rightImgWidthHeightFlag = true;
 
     @Override
     public int getLayout() {
@@ -139,12 +147,13 @@ public class CommonToolbarActivity extends BaseActivity {
      * @param view
      */
     public void btnTitleColor(View view) {
-        toolbar.setTitleColor(colorFlag ? R.color.colorMain : R.color.black);
-        colorFlag = !colorFlag;
+        toolbar.setTitleColor(titleColorFlag ? R.color.colorMain : R.color.black);
+        titleColorFlag = !titleColorFlag;
     }
 
     /**
      * 改变标题
+     *
      * @param view
      */
     public void btnTitle(View view) {
@@ -153,19 +162,103 @@ public class CommonToolbarActivity extends BaseActivity {
 
     /**
      * 分割线显示隐藏
+     *
      * @param view
      */
-    public void btnViewVisible(View view) {
-        toolbar.setViewLineIsVisiblity(viewLineFlag?CommonToolbar.VIEW_GONE:CommonToolbar.VIEW_VISIBLE);
-        viewLineFlag = !viewLineFlag;
+    public void btnDividerVisiblity(View view) {
+        toolbar.setDividerIsVisiblity(dividerFlag ? CommonToolbar.VIEW_GONE : CommonToolbar.VIEW_VISIBLE);
+        dividerFlag = !dividerFlag;
+    }
+
+    /**
+     * 分割线颜色
+     *
+     * @param view
+     */
+    public void btnDividerColor(View view) {
+        toolbar.setDividerColor(dividerColorFlag ? R.color.colorPrimary : R.color.black);
+        dividerColorFlag = !dividerColorFlag;
     }
 
     /**
      * 改变背景颜色
+     *
      * @param view
      */
     public void btnbgColor(View view) {
-        toolbar.setBgColor(getResources().getColor(bgColorFlag?R.color.colorMain:R.color.white));
+        toolbar.setBgColor(getResources().getColor(bgColorFlag ? R.color.colorMain : R.color.white));
         bgColorFlag = !bgColorFlag;
+    }
+
+    /**
+     * 改变文字大小
+     *
+     * @param view
+     */
+    public void btnTitleSize(View view) {
+        toolbar.setTitleSize(titleSizeFlag ? 15 : 18);
+        titleSizeFlag = !titleSizeFlag;
+    }
+
+    /**
+     * 左边文字大小
+     *
+     * @param view
+     */
+    public void btnLeftTextSize(View view) {
+        toolbar.setLeftTextSize(leftSizeFlag ? 18 : 15);
+        leftSizeFlag = !leftSizeFlag;
+    }
+
+    /**
+     * 左边文字颜色
+     *
+     * @param view
+     */
+    public void btnLeftTextColor(View view) {
+        toolbar.setLeftTextColor(leftColorFlag ? R.color.colorMain : R.color.black);
+        leftColorFlag = !leftColorFlag;
+    }
+
+    /**
+     * 左边图片大小
+     *
+     * @param view
+     */
+    public void btnLeftImgWidthHeight(View view) {
+        toolbar.setLeftImgWidth(leftImgWidthHeightFlag ? 50 : 30);
+        toolbar.setLeftImgHeight(leftImgWidthHeightFlag ? 50 : 30);
+        leftImgWidthHeightFlag = !leftImgWidthHeightFlag;
+    }
+
+    /**
+     * 右边文字大小
+     *
+     * @param view
+     */
+    public void btnRightTextSize(View view) {
+        toolbar.setRightTextSize(rightSizeFlag ? 18 : 15);
+        rightSizeFlag = !rightSizeFlag;
+    }
+
+    /**
+     * 右边文字颜色
+     *
+     * @param view
+     */
+    public void btnRightTextColor(View view) {
+        toolbar.setRightTextColor(rightColorFlag ? R.color.colorMain : R.color.black);
+        rightColorFlag = !rightColorFlag;
+    }
+
+    /**
+     * 右边图片大小
+     *
+     * @param view
+     */
+    public void btnRightImgWidthHeight(View view) {
+        toolbar.setRightImgWidth(rightImgWidthHeightFlag ? 50 : 30);
+        toolbar.setRightImgHeight(rightImgWidthHeightFlag ? 50 : 30);
+        rightImgWidthHeightFlag = !rightImgWidthHeightFlag;
     }
 }

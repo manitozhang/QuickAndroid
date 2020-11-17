@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/rl_left_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true">
 
         <TextView
@@ -27,10 +27,10 @@
         <ImageView
             android:id="@+id/iv_toolbar_left"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="15dp"
             android:layout_centerVertical="true"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
 
 
         <FrameLayout
@@ -56,10 +56,9 @@
     <RelativeLayout
         android:id="@+id/rl_right_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:orientation="vertical"
-        tools:ignore="RelativeOverlap">
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_toolbar_right"
@@ -69,15 +68,16 @@
             android:gravity="center"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp" />
 
         <ImageView
             android:id="@+id/iv_toolbar_right"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="15dp"
             android:layout_centerVertical="true"
-            android:padding="10dp" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
 
         <FrameLayout
             android:id="@+id/fl_toolbar_right"
@@ -89,7 +89,7 @@
     </RelativeLayout>
 
     <View
-        android:id="@+id/view_line"
+        android:id="@+id/view_divider"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_alignParentBottom="true"

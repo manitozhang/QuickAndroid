@@ -1,10 +1,12 @@
 package com.common.util.filedownload;
 
 import com.blankj.utilcode.constant.PermissionConstants;
+import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.PermissionUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.liulishuo.filedownloader.BaseDownloadTask;
+import com.liulishuo.filedownloader.FileDownloadListener;
 import com.liulishuo.filedownloader.FileDownloadSampleListener;
 import com.liulishuo.filedownloader.FileDownloader;
 
@@ -51,21 +53,19 @@ public class FileDownloadHelper {
     }
 
 
-    private void startDownload(String downloadUrl, String savePath, boolean isForceReDownload, OnDownloadListener onDownloadListener){
+    private void startDownload(String downloadUrl, String savePath, boolean isForceReDownload, OnDownloadListener onDownloadListener) {
         String[] split = downloadUrl.split("\\.");
         String fileName = "downloadFile." + split[split.length - 1];
         String filePath = savePath + fileName;
         baseDownloadTask = FileDownloader.getImpl().create(downloadUrl)
-                .setPath(filePath, false)
+                .setPath(filePath)
                 .setCallbackProgressTimes(300)
                 .setForceReDownload(isForceReDownload)
                 .setMinIntervalUpdateSpeed(400)
-                .setListener(new FileDownloadSampleListener() {
-
+                .setListener(new FileDownloadListener() {
                     @Override
                     protected void pending(BaseDownloadTask task, int soFarBytes, int totalBytes) {
-                        onDownloadListener.onPending(task.getId(), soFarBytes, totalBytes);
-                        super.pending(task, soFarBytes, totalBytes);
+
                     }
 
                     @Override
@@ -80,8 +80,18 @@ public class FileDownloadHelper {
                     }
 
                     @Override
+                    protected void paused(BaseDownloadTask task, int soFarBytes, int totalBytes) {
+
+                    }
+
+                    @Override
                     protected void error(BaseDownloadTask task, Throwable e) {
                         onDownloadListener.onError(e);
+                    }
+
+                    @Override
+                    protected void warn(BaseDownloadTask task) {
+
                     }
                 });
         baseDownloadTask.start();
@@ -90,7 +100,7 @@ public class FileDownloadHelper {
     /**
      * 暂停下载
      */
-    public void pause(){
+    public void pause() {
         baseDownloadTask.pause();
     }
 

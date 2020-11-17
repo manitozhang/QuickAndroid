@@ -16,18 +16,32 @@
         <attr name="toolbarBgColor" format="reference" />
         <!--标题文字-->
         <attr name="toolbarTitle" format="string" />
+        <!--标题文字大小-->
+        <attr name="toolbarTitleSize" format="dimension" />
         <!--标题文字颜色-->
         <attr name="toolbarTitleColor" format="color" />
         <!--左边图片-->
         <attr name="toolbarLeftImg" format="reference" />
+        <!--左边图片 宽度-->
+        <attr name="toolbarLeftImgWidth" format="dimension" />
+        <!--左边图片 高度-->
+        <attr name="toolbarLeftImgHeight" format="dimension" />
         <!--左边文字-->
         <attr name="toolbarLeftText" format="string" />
+        <!--左边文字大小-->
+        <attr name="toolbarLeftTextSize" format="dimension" />
         <!--左边文字颜色-->
         <attr name="toolbarLeftTextColor" format="color" />
         <!--右边图片-->
         <attr name="toolbarRightImg" format="reference" />
+        <!--右边图片 宽度-->
+        <attr name="toolbarRightImgWidth" format="dimension" />
+        <!--右边图片 高度-->
+        <attr name="toolbarRightImgHeight" format="dimension" />
         <!--右边文字-->
         <attr name="toolbarRightText" format="string" />
+        <!--右边文字大小-->
+        <attr name="toolbarRightTextSize" format="dimension" />
         <!--右边文字颜色-->
         <attr name="toolbarRightTextColor" format="color" />
         <!--左边布局类型-->
@@ -52,8 +66,10 @@
             <!--一个布局-->
             <enum name="VIEW" value="3" />
         </attr>
-        <!--是否显示分割线-->
-        <attr name="viewLineIsVisiblity" format="enum">
+        <!--分隔线颜色-->
+        <attr name="toolbarDividerColor" format="color" />
+        <!--是否显示分隔线-->
+        <attr name="toolbarDividerVisibility" format="enum">
             <enum name="GONE" value="0" />
             <enum name="VISIBLE" value="1" />
         </attr>

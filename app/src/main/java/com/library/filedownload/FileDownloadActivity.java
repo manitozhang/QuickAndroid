@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.AppUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.common.base.BaseActivity;
 import com.common.util.BitmapUtil;
@@ -19,7 +20,7 @@ import com.library.R;
  */
 public class FileDownloadActivity extends BaseActivity {
 
-    private static final String fileUrl = "https://library-collection.oss-cn-beijing.aliyuncs.com/file/file.zip";
+    private static final String fileUrl = "https://library-collection.oss-cn-beijing.aliyuncs.com/file/file.apk";
     private int ids;
     private ProgressBar progressBar;
     private TextView tvProgress;
@@ -79,6 +80,8 @@ public class FileDownloadActivity extends BaseActivity {
             @Override
             public void onComplete(String path) {
                 ToastUtils.showShort("下载完成");
+                //安装App
+                AppUtils.installApp(path);
             }
 
             @Override
