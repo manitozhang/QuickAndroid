@@ -40,7 +40,7 @@
 
  + [公共标题栏-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/toolbar/CommonToolbarActivity.java)
 
-<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/CommonToolbar.png" width="135px" height="240px" alt="公共标题栏" align=center>
+<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/CommonToolbar1.png" width="135px" height="240px" alt="公共标题栏" align=center>
 
 ---
 
