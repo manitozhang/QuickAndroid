@@ -42,16 +42,44 @@
             android:visibility="gone" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv_toolbar_title"
+    <RelativeLayout
+        android:id="@+id/rl_center_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:singleLine="true"
-        android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/iv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="gone" />
+
+
+        <FrameLayout
+            android:id="@+id/fl_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_right_view"

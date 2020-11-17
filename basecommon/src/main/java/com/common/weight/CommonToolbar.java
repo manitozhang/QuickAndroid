@@ -27,12 +27,25 @@ import com.common.R;
 public class CommonToolbar extends RelativeLayout {
 
     /**
+     * 没有属性
+     */
+    public static final int NONE_PROPERTY = -999;
+
+    /**
      * 左边布局类型
      */
     public static final int LEFT_TYPE_NONE = -1;//无
     public static final int LEFT_TYPE_TEXT = 1;//文字
     public static final int LEFT_TYPE_IMAGE = 2;//图片
     public static final int LEFT_TYPE_VIEW = 3;//布局
+
+    /**
+     * 左边布局类型
+     */
+    public static final int TITLE_TYPE_NONE = -1;//无
+    public static final int TITLE_TYPE_TEXT = 1;//文字
+    public static final int TITLE_TYPE_IMAGE = 2;//图片
+    public static final int TITLE_TYPE_VIEW = 3;//布局
 
     /**
      * 右边布局类型
@@ -57,11 +70,15 @@ public class CommonToolbar extends RelativeLayout {
     private FrameLayout flToolbarRight;
     private FrameLayout flToolbarLeft;
     private View viewDivider;
+    private OnTitleClickListener onTitleClickListener = null;
     private OnLeftClickListener onLeftClickListener = null;
     private OnRightClickListener onRightClickListener = null;
     private ImageView ivToolbarLeft;
     private RelativeLayout rlRightView;
     private RelativeLayout rlLeftView;
+    private RelativeLayout rlCenterView;
+    private ImageView ivToolbarTitle;
+    private FrameLayout flToolbarTitle;
 
     public CommonToolbar(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -77,7 +94,11 @@ public class CommonToolbar extends RelativeLayout {
     private void initView(Context context, AttributeSet attrs) {
         View inflate = LayoutInflater.from(context).inflate(R.layout.layout_toolbar, this);
         rlToolbarRoot = inflate.findViewById(R.id.rl_toolbar_root);
+
+        rlCenterView = inflate.findViewById(R.id.rl_center_view);
         tvToolbarTitle = inflate.findViewById(R.id.tv_toolbar_title);
+        ivToolbarTitle = inflate.findViewById(R.id.iv_toolbar_title);
+        flToolbarTitle = inflate.findViewById(R.id.fl_toolbar_title);
 
         rlLeftView = inflate.findViewById(R.id.rl_left_view);
         tvToolbarLeft = inflate.findViewById(R.id.tv_toolbar_left);
@@ -93,65 +114,85 @@ public class CommonToolbar extends RelativeLayout {
         //获取属性值
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CommonToolbar);
         //背景颜色类型
-        int rootBackground = typedArray.getResourceId(R.styleable.CommonToolbar_toolbarBgColor, R.color.white);
+        int rootBackground = typedArray.getResourceId(R.styleable.CommonToolbar_toolbarBackground, R.color.white);
+
+        //标题布局类型
+        int titleType = typedArray.getInteger(R.styleable.CommonToolbar_toolbarTitleType, TITLE_TYPE_TEXT);
         //标题文字
         String strTitle = typedArray.getString(R.styleable.CommonToolbar_toolbarTitle);
         //标题文字大小
         float titleSize = typedArray.getDimension(R.styleable.CommonToolbar_toolbarTitleSize, ConvertUtils.dp2px(18));
         //标题文字颜色
         int titleColor = typedArray.getColor(R.styleable.CommonToolbar_toolbarTitleColor, getResources().getColor(R.color.black));
+        //标题图片
+        int titleImg = typedArray.getResourceId(R.styleable.CommonToolbar_toolbarTitleImg, R.drawable.ic_title);
+        //标题图片宽度
+        float titleImgWidth = typedArray.getDimension(R.styleable.CommonToolbar_toolbarTitleImgWidth, NONE_PROPERTY);
+        //标题图片高度
+        float titleImgHeight = typedArray.getDimension(R.styleable.CommonToolbar_toolbarTitleImgHeight, NONE_PROPERTY);
+
+        //左边布局类型
+        int leftType = typedArray.getInteger(R.styleable.CommonToolbar_toolbarLeftType, LEFT_TYPE_IMAGE);
         //左边图片
         int leftImg = typedArray.getResourceId(R.styleable.CommonToolbar_toolbarLeftImg, R.drawable.ic_back);
         //左边图片宽度
-        float leftImgWidth = typedArray.getDimension(R.styleable.CommonToolbar_toolbarLeftImgWidth, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        float leftImgWidth = typedArray.getDimension(R.styleable.CommonToolbar_toolbarLeftImgWidth, NONE_PROPERTY);
         //左边图片高度
-        float leftImgHeight = typedArray.getDimension(R.styleable.CommonToolbar_toolbarLeftImgHeight, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        float leftImgHeight = typedArray.getDimension(R.styleable.CommonToolbar_toolbarLeftImgHeight, NONE_PROPERTY);
         //左边文字
         String leftText = typedArray.getString(R.styleable.CommonToolbar_toolbarLeftText);
         //左边文字大小
         float leftTextSize = typedArray.getDimension(R.styleable.CommonToolbar_toolbarLeftTextSize, ConvertUtils.sp2px(15f));
         //左边文字颜色
         int leftTextColor = typedArray.getColor(R.styleable.CommonToolbar_toolbarLeftTextColor, getResources().getColor(R.color.black));
+
+        //右边布局类型
+        int rightType = typedArray.getInteger(R.styleable.CommonToolbar_toolbarRightType, RIGHT_TYPE_NONE);
         //右边图片
         int rightImg = typedArray.getResourceId(R.styleable.CommonToolbar_toolbarRightImg, R.drawable.ic_release);
-        //左边图片宽度
-        float rightImgWidth = typedArray.getDimension(R.styleable.CommonToolbar_toolbarRightImgWidth, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        //左边图片高度
-        float rightImgHeight = typedArray.getDimension(R.styleable.CommonToolbar_toolbarRightImgHeight, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        //右边图片宽度
+        float rightImgWidth = typedArray.getDimension(R.styleable.CommonToolbar_toolbarRightImgWidth, NONE_PROPERTY);
+        //右边图片高度
+        float rightImgHeight = typedArray.getDimension(R.styleable.CommonToolbar_toolbarRightImgHeight, NONE_PROPERTY);
         //右边文字
         String rightText = typedArray.getString(R.styleable.CommonToolbar_toolbarRightText);
         //右边文字大小
         float rightTextSize = typedArray.getDimension(R.styleable.CommonToolbar_toolbarRightTextSize, ConvertUtils.sp2px(15f));
         //右边文字颜色
         int rightTextColor = typedArray.getColor(R.styleable.CommonToolbar_toolbarRightTextColor, getResources().getColor(R.color.black));
-        //右边布局类型
-        int rightType = typedArray.getInteger(R.styleable.CommonToolbar_toolbarRightType, RIGHT_TYPE_NONE);
-        //左边布局类型
-        int LeftType = typedArray.getInteger(R.styleable.CommonToolbar_toolbarLeftType, LEFT_TYPE_IMAGE);
         int dividerColor = typedArray.getColor(R.styleable.CommonToolbar_toolbarDividerColor, getResources().getColor(R.color.black));
         //是否显示分割线
         int dividerVisibility = typedArray.getInteger(R.styleable.CommonToolbar_toolbarDividerVisibility, GONE);
         typedArray.recycle();
 
-
+        setBackgroundRes(rootBackground);
         setTitle(strTitle);
+        setTitleImg(titleImg);
+        setTitleImgWidth(titleImgWidth);
+        setTitleImgHeight(titleImgHeight);
         setTitleSize(ConvertUtils.px2sp(titleSize));
         tvToolbarTitle.setTextColor(titleColor);
 
         //设置左边布局类型
-        setLeftViewType(LeftType);
+        setLeftViewType(leftType);
+        //设置标题布局类型
+        setLeftViewType(titleType);
         //设置右边布局类型
         setRightViewType(rightType);
 
         setLeftText(leftText);
         setLeftTextSize(ConvertUtils.px2sp(leftTextSize));
         setLeftImg(leftImg);
+        setLeftImgWidth(leftImgWidth);
+        setLeftImgHeight(leftImgHeight);
         tvToolbarLeft.setTextColor(leftTextColor);
 
         setRightText(rightText);
         setRightTextSize(ConvertUtils.px2sp(rightTextSize));
         tvToolbarRight.setTextColor(rightTextColor);
         setRightImg(rightImg);
+        setRightImgWidth(rightImgWidth);
+        setRightImgHeight(rightImgHeight);
         //分割线是否显示
         setDividerIsVisiblity(dividerVisibility);
         //分隔线颜色
@@ -161,6 +202,11 @@ public class CommonToolbar extends RelativeLayout {
             if (onLeftClickListener != null)
                 onLeftClickListener.onLeftClick(v);
         });
+        //标题View点击监听
+        rlCenterView.setOnClickListener(v -> {
+            if (onTitleClickListener != null)
+                onTitleClickListener.onTitleClick(v);
+        });
         //右边View点击监听
         rlRightView.setOnClickListener(v -> {
             if (onRightClickListener != null)
@@ -169,13 +215,23 @@ public class CommonToolbar extends RelativeLayout {
     }
 
     /**
-     * 设置背景颜色
+     * 设置左边图片
      *
-     * @param bgColor
+     * @param titleImg:
+     */
+    public CommonToolbar setTitleImg(int titleImg) {
+        ivToolbarTitle.setImageDrawable(getResources().getDrawable(titleImg));
+        return this;
+    }
+
+    /**
+     * 设置背景资源
+     *
+     * @param bgRes
      * @return
      */
-    public CommonToolbar setBgColor(int bgColor) {
-        rlToolbarRoot.setBackgroundColor(bgColor);
+    public CommonToolbar setBackgroundRes(int bgRes) {
+        rlToolbarRoot.setBackgroundResource(bgRes);
         return this;
     }
 
@@ -188,6 +244,17 @@ public class CommonToolbar extends RelativeLayout {
         tvToolbarLeft.setVisibility(leftType == LEFT_TYPE_TEXT ? VISIBLE : GONE);
         ivToolbarLeft.setVisibility(leftType == LEFT_TYPE_IMAGE ? VISIBLE : GONE);
         flToolbarLeft.setVisibility(leftType == LEFT_TYPE_VIEW ? VISIBLE : GONE);
+    }
+
+    /**
+     * 标题布局类型
+     *
+     * @param titleType :左边布局类型
+     */
+    public void setTitleViewType(int titleType) {
+        tvToolbarTitle.setVisibility(titleType == TITLE_TYPE_TEXT ? VISIBLE : GONE);
+        ivToolbarTitle.setVisibility(titleType == TITLE_TYPE_IMAGE ? VISIBLE : GONE);
+        flToolbarTitle.setVisibility(titleType == TITLE_TYPE_VIEW ? VISIBLE : GONE);
     }
 
     /**
@@ -213,7 +280,7 @@ public class CommonToolbar extends RelativeLayout {
     /**
      * 改变分隔线颜色
      */
-    public void setDividerColor(@ColorRes int dividerColor){
+    public void setDividerColor(@ColorRes int dividerColor) {
         viewDivider.setBackgroundColor(getResources().getColor(dividerColor));
     }
 
@@ -247,6 +314,56 @@ public class CommonToolbar extends RelativeLayout {
         return this;
     }
 
+
+    /**
+     * 设置左边图片宽度
+     *
+     * @param titleImgWidth:
+     */
+    public CommonToolbar setTitleImgWidth(float titleImgWidth) {
+        if (titleImgWidth == NONE_PROPERTY)
+            return this;
+        LayoutParams layoutParams = (LayoutParams) ivToolbarTitle.getLayoutParams();
+        //因为左右有给点击区域的padding所以加上两边的padding
+        layoutParams.width = (int) titleImgWidth + ConvertUtils.dp2px(20);
+        ivToolbarTitle.setLayoutParams(layoutParams);
+        return this;
+    }
+
+    /**
+     * 设置标题图片高度
+     *
+     * @param rightImgHeight:
+     */
+    public CommonToolbar setTitleImgHeight(float rightImgHeight) {
+        if (rightImgHeight == NONE_PROPERTY)
+            return this;
+        LayoutParams layoutParams = (LayoutParams) ivToolbarTitle.getLayoutParams();
+        layoutParams.height = (int) rightImgHeight;
+        ivToolbarTitle.setLayoutParams(layoutParams);
+        return this;
+    }
+
+
+    /**
+     * 设置右边view
+     *
+     * @param view:右边布局
+     */
+    public CommonToolbar setTitleView(View view) {
+        flToolbarTitle.removeAllViews();
+        flToolbarTitle.addView(view);
+        return this;
+    }
+
+    /**
+     * 获取右边布局的View
+     * @return
+     */
+    public View getTitleView() {
+        return flToolbarTitle;
+    }
+
     /**
      * 设置左边图片
      *
@@ -263,6 +380,8 @@ public class CommonToolbar extends RelativeLayout {
      * @param leftImgWidth:
      */
     public CommonToolbar setLeftImgWidth(float leftImgWidth) {
+        if (leftImgWidth == NONE_PROPERTY)
+            return this;
         LayoutParams layoutParams = (LayoutParams) ivToolbarLeft.getLayoutParams();
         //因为左右有给点击区域的padding所以加上两边的padding
         layoutParams.width = (int) leftImgWidth + ConvertUtils.dp2px(20);
@@ -276,6 +395,8 @@ public class CommonToolbar extends RelativeLayout {
      * @param leftImgHeight:
      */
     public CommonToolbar setLeftImgHeight(float leftImgHeight) {
+        if (leftImgHeight == NONE_PROPERTY)
+            return this;
         LayoutParams layoutParams = (LayoutParams) ivToolbarLeft.getLayoutParams();
         layoutParams.height = (int) leftImgHeight;
         ivToolbarLeft.setLayoutParams(layoutParams);
@@ -323,6 +444,10 @@ public class CommonToolbar extends RelativeLayout {
         return this;
     }
 
+    /**
+     * 获取左边布局的View
+     * @return
+     */
     public View getLeftView() {
         return flToolbarRight;
     }
@@ -373,6 +498,8 @@ public class CommonToolbar extends RelativeLayout {
      * @param rightImgWidth:
      */
     public CommonToolbar setRightImgWidth(float rightImgWidth) {
+        if (rightImgWidth == NONE_PROPERTY)
+            return this;
         LayoutParams layoutParams = (LayoutParams) ivToolbarRight.getLayoutParams();
         //因为左右有给点击区域的padding所以加上两边的padding
         layoutParams.width = (int) rightImgWidth + ConvertUtils.dp2px(20);
@@ -386,6 +513,8 @@ public class CommonToolbar extends RelativeLayout {
      * @param rightImgHeight:
      */
     public CommonToolbar setRightImgHeight(float rightImgHeight) {
+        if (rightImgHeight == NONE_PROPERTY)
+            return this;
         LayoutParams layoutParams = (LayoutParams) ivToolbarRight.getLayoutParams();
         layoutParams.height = (int) rightImgHeight;
         ivToolbarRight.setLayoutParams(layoutParams);
@@ -403,6 +532,10 @@ public class CommonToolbar extends RelativeLayout {
         return this;
     }
 
+    /**
+     * 获取右边布局的View
+     * @return
+     */
     public View getRightView() {
         return flToolbarRight;
     }
@@ -415,6 +548,13 @@ public class CommonToolbar extends RelativeLayout {
     }
 
     /**
+     * 标题按钮监听
+     */
+    public interface OnTitleClickListener {
+        void onTitleClick(View v);
+    }
+
+    /**
      * 右边按钮监听
      */
     public interface OnRightClickListener {
@@ -423,6 +563,11 @@ public class CommonToolbar extends RelativeLayout {
 
     public CommonToolbar setOnLeftClickListener(OnLeftClickListener onLeftClickListener) {
         this.onLeftClickListener = onLeftClickListener;
+        return this;
+    }
+
+    public CommonToolbar setOnTitleClickListener(OnTitleClickListener onTitleClickListener) {
+        this.onTitleClickListener = onTitleClickListener;
         return this;
     }
 

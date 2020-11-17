@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         app:toolbarLeftImg="@drawable/ic_back"
         app:toolbarLeftText="返回"
+        app:toolbarTitleImg="@drawable/ic_title"
         app:toolbarDividerColor="@color/black"
         app:toolbarDividerVisibility="VISIBLE"
         app:toolbarLeftTextColor="@color/black"
@@ -76,15 +77,55 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="btnTitle"
-                    android:text="改变文字" />
+                    android:onClick="btnTitleColor"
+                    android:text="标题颜色" />
 
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="btnTitleColor"
-                    android:text="标题颜色" />
+                    android:onClick="btnTitleImgWidthHeight"
+                    android:text="图片宽高" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="标题view类型:"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="btnTitleNone"
+                    android:text="隐藏" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="btnTitleImg"
+                    android:text="图片" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="btnTitleText"
+                    android:text="文字" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="btnTitleView"
+                    android:text="布局" />
             </LinearLayout>
 
             <TextView
