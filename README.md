@@ -12,6 +12,7 @@
 ---
 
 ## [更新日志](https://github.com/manitozhang/QuickAndroid/blob/master/README-UPDATE.md)
+
 ---
 ## 项目中所包含的功能
 + 安卓快速开发框架
@@ -21,6 +22,11 @@
 + 常用第三方组件的继承处理属性
 ---
  ## 快速引导
+
+|[首页框架-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/mainpage/MainPageActivity.java)|[网络请求示例-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/http/HttpSampleActivity.java)|
+|:---:|:---:|
+|<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="135px" height="240px" alt="首页框架" align=center>|<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="135px" height="240px" alt="首页框架" align=center>|
+
 
  + [首页框架-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/mainpage/MainPageActivity.java)
 
