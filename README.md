@@ -1,6 +1,8 @@
 # QuickAndroid Android快速开发框(持续更新中)
 
----
+
+## [更新日志](https://github.com/manitozhang/QuickAndroid/blob/master/README-UPDATE.md)
+
 
 ## 各位小伙伴如果想到有什么常用到的可以联系我添加
 1. 可以提交issus
@@ -8,11 +10,6 @@
 
 ## 项目介绍
 + 针对用于一些外包或者其他快速开发的app,项目中包含了一些常用的框架,还有集成一些常用的第三方库以及使用,以及常用的组合控件(标题栏,按钮,菜单条目...),每个第三方使用方法和项目的架构均可直接复制到项目中使用,没有很多关联,继承实现之类,基本上每个东西单独封装,可直接引入basecommon包使用,也可按需cv
-
----
-
-## [更新日志](https://github.com/manitozhang/QuickAndroid/blob/master/README-UPDATE.md)
-
 ---
 ## 项目中所包含的功能
 + 安卓快速开发框架
@@ -48,7 +45,7 @@
 
  + [公共标题栏-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/toolbar/CommonToolbarActivity.java)
 
-<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/CommonToolbar.png" width="135px" height="240px" alt="公共标题栏" align=center>
+<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/CommonToolbar1.png" width="135px" height="240px" alt="公共标题栏" align=center>
 
 ---
 
