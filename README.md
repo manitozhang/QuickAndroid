@@ -22,7 +22,8 @@
 
 |[首页框架-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/mainpage/MainPageActivity.java)|[网络请求示例-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/http/HttpSampleActivity.java)|
 |:---:|:---:|
-|<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="135px" height="240px" alt="首页框架" align=center>|<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="135px" height="240px" alt="首页框架" align=center>|
+|<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="135px" height="240px" alt="首页框架" align=center>
+|<img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="135px" height="240px" alt="首页框架" align=center>|
 
 
  + [首页框架-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/mainpage/MainPageActivity.java)
