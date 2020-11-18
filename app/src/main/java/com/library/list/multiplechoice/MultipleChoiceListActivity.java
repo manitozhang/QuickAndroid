@@ -25,6 +25,7 @@ import java.util.List;
 
 /**
  * 多选列表
+ * 类似于列表收藏,点赞,关注都属于多选
  */
 public class MultipleChoiceListActivity extends BaseActivity {
 
