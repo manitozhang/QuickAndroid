@@ -25,3 +25,9 @@
 | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="175px" height="312px" alt="首页框架" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/HttpSample.png" width="175px" height="312px" alt="网络请求示例" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/LazyLoad.png" width="175px" height="312px" alt="Fragment懒加载" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/CommonToolbar1.png" width="175px" height="312px" alt="公共标题栏" align=center> |
 | [文件下载安装-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/filedownload/FileDownloadActivity.java) | [列表刷新加载-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/list/refreshload/RefreshLoadListActivity.java) | [列表单选-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/list/singlechoice/SingleChoiceListActivity.java) | [列表多选-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/list/multiplechoice/MultipleChoiceListActivity.java) |
 | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/FileDownload.png" width="175px" height="312px" alt="文件下载安装" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/ListRefreshLoad.png" width="175px" height="312px" alt="列表刷新加载" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/ListSingleChoice.png" width="175px" height="312px" alt="列表单选" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/ListMultipleChoice.png" width="175px" height="312px" alt="列表多选" align=center> |
+
+## 免责声明
+
++ 项目旨在为更多的Android初学者与开发者提供便利,项目内使用到一些第三方开源库,如有违规或侵权,请联系删除
++ 项目使用的大部分开源库均可商用,不排除没有看到的或作者刚声明的,如出现法律纠纷与本人无关
++ 项目本着互相交流学习的目的,禁止用于非法用途,如出现法律纠纷与本人无关
