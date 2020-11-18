@@ -15,6 +15,9 @@ import com.library.filedownload.FileDownloadActivity;
 import com.library.glide.GlideUseActivity;
 import com.library.http.HttpSampleActivity;
 import com.library.lazyload.LazyLoadActivity;
+import com.library.list.multiplechoice.MultipleChoiceListActivity;
+import com.library.list.refreshload.RefreshLoadListActivity;
+import com.library.list.singlechoice.SingleChoiceListActivity;
 import com.library.mainpage.MainPageActivity;
 import com.library.toolbar.CommonToolbarActivity;
 
@@ -86,5 +89,29 @@ public class MainActivity extends BaseActivity {
      */
     public void btnDownload(View view) {
         startActivity(new Intent(this, FileDownloadActivity.class));
+    }
+
+    /**
+     * 列表刷新加载
+     * @param view
+     */
+    public void btnListRefresh(View view) {
+        startActivity(new Intent(this , RefreshLoadListActivity.class));
+    }
+
+    /**
+     * 列表单选
+     * @param view
+     */
+    public void btnListSingleChoice(View view) {
+        startActivity(new Intent(this , SingleChoiceListActivity.class));
+    }
+
+    /**
+     * 列表多选
+     * @param view
+     */
+    public void btnListMultipleChoice(View view) {
+        startActivity(new Intent(this , MultipleChoiceListActivity.class));
     }
 }

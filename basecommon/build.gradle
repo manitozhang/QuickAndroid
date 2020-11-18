@@ -38,6 +38,8 @@ dependencies {
     api rootProject.ext.dependencies.androidUtilCode
     api rootProject.ext.dependencies.glide
     annotationProcessor rootProject.ext.dependencies.glideCompiler
+    api rootProject.ext.dependencies.smartRefresh
+    api rootProject.ext.dependencies.smartRefreshClassics
 
     api rootProject.ext.dependencies.fileDownloader
 

@@ -3,7 +3,9 @@
     package="com.library">
 
     <application>
-        <activity android:name=".list.refreshload.RefreshLoadListActivity"></activity>
+        <activity android:name=".list.multiplechoice.MultipleChoiceListActivity"></activity>
+        <activity android:name=".list.singlechoice.SingleChoiceListActivity" />
+        <activity android:name=".list.refreshload.RefreshLoadListActivity" />
         <activity android:name=".filedownload.FileDownloadActivity" />
         <activity android:name=".glide.GlideUseActivity" />
         <activity android:name=".toolbar.CommonToolbarActivity" />

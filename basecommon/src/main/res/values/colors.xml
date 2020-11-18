@@ -9,4 +9,7 @@
     <color name="colorMain">#03DAC5</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+    <color name="color_f5f5">#F5F5F5</color>
+    <color name="color_7878">#787878</color>
 </resources>

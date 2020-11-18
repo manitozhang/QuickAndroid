@@ -9,36 +9,66 @@
 
     <Button
         android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="btnMainPage"
-        android:text="首页框架"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:text="首页框架" />
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="btnHttp"
-        android:text="网络请求示例"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:text="网络请求示例" />
 
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="btnLazyLoad"
-        android:text="Fragment懒加载"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:text="Fragment懒加载" />
+
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="btnCommonToolbar"
-        android:text="公共标题栏"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:text="公共标题栏" />
+
     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="btnGlideClip"
-        android:text="Glide各种裁剪"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:text="Glide各种裁剪" />
+
     <Button
-        android:onClick="btnDownload"
-        android:text="文件下载"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:onClick="btnDownload"
+        android:text="文件下载" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnListRefresh"
+            android:text="列表刷新" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnListSingleChoice"
+            android:text="列表单选" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnListMultipleChoice"
+            android:text="列表多选" />
+    </LinearLayout>
 
 </LinearLayout>

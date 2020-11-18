@@ -39,4 +39,16 @@ public class Mobile {
         return map;
     }
 
+    /**
+     * 获取集合
+     * @param page: 页数
+     * @param pageNum: 每页的条目数
+     * @return
+     */
+    public static HashMap<String, Object> getList(int page, int pageNum) {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("page",page);
+        map.put("pageNum",pageNum);
+        return map;
+    }
 }

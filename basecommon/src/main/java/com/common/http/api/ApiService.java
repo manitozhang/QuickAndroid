@@ -4,8 +4,10 @@ package com.common.http.api;
 import com.common.http.base.BaseResponse;
 import com.common.http.bean.ExampleBean;
 import com.common.http.bean.ExampleFileBean;
+import com.common.http.bean.ExampleListBean;
 
 import java.util.HashMap;
+import java.util.List;
 
 import io.reactivex.Observable;
 import okhttp3.MultipartBody;
@@ -70,6 +72,7 @@ public interface ApiService {
 
     /**
      * post提交json格式数据
+     *
      * @param body
      * @return
      */
@@ -78,6 +81,7 @@ public interface ApiService {
 
     /**
      * 文件上传
+     *
      * @param file
      * @param map
      * @return
@@ -85,23 +89,6 @@ public interface ApiService {
     @POST("api/uploadFile")
     @Multipart
     Observable<BaseResponse<ExampleFileBean>> testUploadFile(@Part MultipartBody.Part file, @PartMap HashMap<String, Object> map);
-
-    /**
-     * 例子1: GET
-     *
-     * @return
-     */
-    @GET("example/1")
-    Observable<BaseResponse<ExampleBean>> example1(@QueryMap HashMap<String, Object> map);
-
-    /**
-     * 例子2: POST
-     *
-     * @return
-     */
-    @POST("example/2")
-    @FormUrlEncoded
-    Observable<BaseResponse<ExampleBean>> example2(@FieldMap HashMap<String, Object> map);
 
     /**
      * 例子3: RequestBody
@@ -112,11 +99,12 @@ public interface ApiService {
     Observable<BaseResponse<ExampleBean>> example3(@Body RequestBody body);
 
     /**
-     * 例子4: 文件上传
+     * 获取集合
      *
+     * @param map
      * @return
      */
-    @POST("example/4")
-    @Multipart
-    Observable<BaseResponse<ExampleBean>> example4(@Part MultipartBody.Part file, @PartMap HashMap<String, Object> map);
+    @GET("api/getList")
+    Observable<BaseResponse<List<ExampleListBean>>> getList(@QueryMap HashMap<String, Object> map);
+
 }
