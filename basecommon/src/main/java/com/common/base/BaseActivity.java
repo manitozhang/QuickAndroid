@@ -2,18 +2,15 @@ package com.common.base;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
-import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-import com.common.library.eventbus.EventBus;
+import org.greenrobot.eventbus.EventBus;
 
 
 /**

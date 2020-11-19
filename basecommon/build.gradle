@@ -36,6 +36,8 @@ dependencies {
     androidTestApi rootProject.ext.dependencies.testEspressoCore
     api rootProject.ext.dependencies.design
     api rootProject.ext.dependencies.androidUtilCode
+    api rootProject.ext.dependencies.autoSize
+    api rootProject.ext.dependencies.eventBus
     api rootProject.ext.dependencies.glide
     annotationProcessor rootProject.ext.dependencies.glideCompiler
     api rootProject.ext.dependencies.smartRefresh
