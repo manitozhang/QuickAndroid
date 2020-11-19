@@ -47,8 +47,6 @@ dependencies {
     api rootProject.ext.dependencies.glide
     //kotlin 推荐使用kapt加入注解
     kapt rootProject.ext.dependencies.glideCompiler
-    api rootProject.ext.dependencies.autoSize
-    api rootProject.ext.dependencies.eventBus
     api rootProject.ext.dependencies.smartRefresh
     api rootProject.ext.dependencies.smartRefreshClassics
     api rootProject.ext.dependencies.fileDownloader
