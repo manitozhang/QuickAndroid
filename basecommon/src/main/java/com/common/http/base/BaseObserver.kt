@@ -2,14 +2,11 @@ package com.common.http.base
 
 import android.content.Context
 import android.net.ParseException
-import android.os.Parcel
-import android.os.Parcelable
 import androidx.appcompat.app.AlertDialog
 import com.blankj.utilcode.util.NetworkUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.common.R
-import com.common.http.bean.ExampleBean
-import com.google.gson.JsonParseException
+import com.google.gson.JsonSyntaxException
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import org.json.JSONException
@@ -69,7 +66,7 @@ abstract class BaseObserver<T> : Observer<BaseResponse<T>> {
         } else if (e is SocketTimeoutException) { //连接超时等
             ToastUtils.showShort(R.string.error_time_out)
         } else if (e is JSONException
-                || e is JsonParseException
+                || e is JsonSyntaxException
                 || e is ParseException) { //数据解析异常
             ToastUtils.showShort(R.string.error_data_parse)
         } else { //未知异常
