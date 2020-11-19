@@ -6,7 +6,6 @@
 
 ## [项目用到的开源库以及地址](https://github.com/manitozhang/QuickAndroid/blob/master/README-LIBRARY.md)
 
-
 ## 各位小伙伴如果想到有什么常用到的可以联系我添加
 1. 可以提交issus
 2. 加我联系方式: 1271396448  (QQ,Vx 同步)
