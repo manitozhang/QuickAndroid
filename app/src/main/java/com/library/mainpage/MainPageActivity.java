@@ -1,7 +1,6 @@
 package com.library.mainpage;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -9,13 +8,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.common.base.BaseActivity;
-import com.common.library.eventbus.EventBus;
-import com.common.util.SpUtil;
 import com.library.R;
 import com.library.mainpage.fragment.HomeFragment;
 import com.library.mainpage.fragment.MineFragment;
 import com.library.mainpage.fragment.NewsFragment;
-import com.library.testmvp.LoginActivity;
 
 /**
  * 首页页面

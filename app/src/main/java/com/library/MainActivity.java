@@ -1,16 +1,12 @@
 package com.library;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-import com.blankj.utilcode.util.ConvertUtils;
+import androidx.annotation.Nullable;
+
 import com.common.base.BaseActivity;
-import com.common.util.BitmapUtil;
 import com.library.filedownload.FileDownloadActivity;
 import com.library.glide.GlideUseActivity;
 import com.library.http.HttpSampleActivity;
@@ -18,6 +14,7 @@ import com.library.lazyload.LazyLoadActivity;
 import com.library.list.multiplechoice.MultipleChoiceListActivity;
 import com.library.list.refreshload.RefreshLoadListActivity;
 import com.library.list.singlechoice.SingleChoiceListActivity;
+import com.library.login.LoginActivity;
 import com.library.mainpage.MainPageActivity;
 import com.library.toolbar.CommonToolbarActivity;
 
@@ -113,5 +110,13 @@ public class MainActivity extends BaseActivity {
      */
     public void btnListMultipleChoice(View view) {
         startActivity(new Intent(this , MultipleChoiceListActivity.class));
+    }
+
+    /**
+     * Mvp示例
+     * @param view
+     */
+    public void btnMvp(View view) {
+        startActivity(new Intent(this , LoginActivity.class));
     }
 }
