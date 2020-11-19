@@ -1,5 +1,6 @@
 apply from: "config.gradle"
 buildscript {
+    ext.kotlin_version = '1.4.20-RC'
 
     repositories {
         google()
@@ -8,6 +9,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
 
         // NOTE: Do not place your application dependencies here; they belong
