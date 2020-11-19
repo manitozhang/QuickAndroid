@@ -2,7 +2,7 @@
 
 ## [更新日志](https://github.com/manitozhang/QuickAndroid/blob/master/README-UPDATE.md)
 
-## [kotlin版本点击](https://github.com/manitozhang/QuickAndroid/tree/java)
+## [kotlin版本点击](https://github.com/manitozhang/QuickAndroid/tree/kotlin)
 
 ## [项目用到的开源库以及地址](https://github.com/manitozhang/QuickAndroid/blob/master/README-LIBRARY.md)
 
