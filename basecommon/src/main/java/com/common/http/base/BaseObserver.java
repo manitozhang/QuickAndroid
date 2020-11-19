@@ -9,7 +9,7 @@ import androidx.appcompat.app.AlertDialog;
 import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.common.R;
-import com.google.gson.JsonParseException;
+import com.google.gson.JsonSyntaxException;
 
 import org.json.JSONException;
 
@@ -81,8 +81,8 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
             ToastUtils.showShort(R.string.error_server);
         } else if (e instanceof SocketTimeoutException) {//连接超时等
             ToastUtils.showShort(R.string.error_time_out);
-        } else if (e instanceof JSONException
-                || e instanceof JsonParseException
+        } else if (e instanceof JsonSyntaxException
+                || e instanceof JSONException
                 || e instanceof ParseException) {//数据解析异常
             ToastUtils.showShort(R.string.error_data_parse);
         } else {//未知异常

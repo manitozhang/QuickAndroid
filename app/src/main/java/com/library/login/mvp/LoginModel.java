@@ -21,6 +21,6 @@ public class LoginModel implements LoginContract.Model {
 
     @Override
     public Observable<BaseResponse<ExampleBean>> login(HashMap<String, Object> map) {
-        return XRetrofit.getApi().example3(RequestBodyHelper.getRequestBody(map));
+        return XRetrofit.getApi().testLogin(RequestBodyHelper.getRequestBody(map));
     }
 }
