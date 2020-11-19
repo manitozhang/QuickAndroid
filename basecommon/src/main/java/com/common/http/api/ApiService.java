@@ -95,8 +95,8 @@ public interface ApiService {
      *
      * @return
      */
-    @POST("example/3")
-    Observable<BaseResponse<ExampleBean>> example3(@Body RequestBody body);
+    @POST("api/postJson")
+    Observable<BaseResponse<ExampleBean>> testLogin(@Body RequestBody body);
 
     /**
      * 获取集合
