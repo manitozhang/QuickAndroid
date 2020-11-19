@@ -1,6 +1,8 @@
-# QuickAndroid Android快速开发框(持续更新中)
+# QuickAndroid Android-Kotlin快速开发框(持续更新中)
 
 ## [更新日志](https://github.com/manitozhang/QuickAndroid/blob/master/README-UPDATE.md)
+
+## [java版本点击](https://github.com/manitozhang/QuickAndroid/tree/java)
 
 ## [项目用到的开源库以及地址](https://github.com/manitozhang/QuickAndroid/blob/master/README-LIBRARY.md)
 
@@ -21,10 +23,10 @@
 ---
  ## 快速引导
 
-| [首页框架-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/mainpage/MainPageActivity.java) | [网络请求示例-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/http/HttpSampleActivity.java) | [Fragment懒加载-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/lazyload/LazyFragment.java) | [公共标题栏-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/toolbar/CommonToolbarActivity.java) |
+| [首页框架-使用](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/mainpage/MainPageActivity.kt) | [网络请求示例-使用](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/http/HttpSampleActivity.kt) | [Fragment懒加载-使用](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/lazyload/LazyFragment.kt) | [公共标题栏-使用](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/toolbar/CommonToolbarActivity.kt) |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/MainPage.png" width="175px" height="312px" alt="首页框架" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/HttpSample.png" width="175px" height="312px" alt="网络请求示例" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/LazyLoad.png" width="175px" height="312px" alt="Fragment懒加载" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/CommonToolbarSample.png" width="175px" height="312px" alt="公共标题栏" align=center> |
-| [文件下载安装-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/filedownload/FileDownloadActivity.java) | [列表刷新加载-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/list/refreshload/RefreshLoadListActivity.java) | [列表单选-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/list/singlechoice/SingleChoiceListActivity.java) | [列表多选-使用](https://github.com/manitozhang/QuickAndroid/blob/master/app/src/main/java/com/library/list/multiplechoice/MultipleChoiceListActivity.java) |
+| [文件下载安装-使用](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/filedownload/FileDownloadActivity.kt) | [列表刷新加载-使用](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/list/refreshload/RefreshLoadListActivity.kt) | [列表单选-使用](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/list/singlechoice/SingleChoiceListActivity.kt) | [列表多选-使用](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/list/multiplechoice/MultipleChoiceListActivity.kt) |
 | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/FileDownload.png" width="175px" height="312px" alt="文件下载安装" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/ListRefreshLoad.png" width="175px" height="312px" alt="列表刷新加载" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/ListSingleChoice.png" width="175px" height="312px" alt="列表单选" align=center> | <img src="https://library-collection.oss-cn-beijing.aliyuncs.com/static/ListMultipleChoice.png" width="175px" height="312px" alt="列表多选" align=center> |
 
 
