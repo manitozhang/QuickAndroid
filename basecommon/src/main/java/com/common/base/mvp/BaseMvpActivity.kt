@@ -13,7 +13,7 @@ import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
  *
  * @Desc: Mvp Activity 基类
  */
-abstract class BaseMvpActivity<P : BasePresenter<Any>?> : BaseActivity(), BaseView {
+abstract class BaseMvpActivity<P : BasePresenter<*>?> : BaseActivity(), BaseView {
     protected var mPresenter: P? = null
     /**
      * 接触View绑定

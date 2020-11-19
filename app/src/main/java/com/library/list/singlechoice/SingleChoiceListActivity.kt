@@ -14,12 +14,12 @@ import com.common.library.bravh_rvadapter.BaseRecyclerAdapter
 import com.common.library.bravh_rvadapter.BaseRecyclerAdapter.OnItemChildClickListener
 import com.common.weight.CommonRecyclerView
 import com.library.R
+import kotlinx.android.synthetic.main.activity_single_choice_list.*
 
 /**
  * 单选列表Activity
  */
 class SingleChoiceListActivity : BaseActivity() {
-    private var rvSingleChoice: CommonRecyclerView? = null
     private var singleChoiceListAdapter: SingleChoiceListAdapter? = null
     private val page = 1
     private val pageNum = 20
@@ -27,7 +27,6 @@ class SingleChoiceListActivity : BaseActivity() {
         get() = R.layout.activity_single_choice_list
 
     override fun initViewIds() {
-        rvSingleChoice = findViewById(R.id.rv_single_choice)
     }
 
     override fun initView() {
@@ -36,9 +35,9 @@ class SingleChoiceListActivity : BaseActivity() {
 
     private fun initSingleChoiceRecycler() {
         val layoutManager = LinearLayoutManager(this)
-        rvSingleChoice!!.layoutManager = layoutManager
+        rv_single_choice!!.layoutManager = layoutManager
         singleChoiceListAdapter = SingleChoiceListAdapter(emptyList())
-        rvSingleChoice!!.adapter = singleChoiceListAdapter
+        rv_single_choice!!.adapter = singleChoiceListAdapter
     }
 
     override fun initData(savedInstanceState: Bundle?) {

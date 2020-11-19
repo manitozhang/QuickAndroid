@@ -1,4 +1,4 @@
-package com.library.testmvp.mvp
+package com.library.login.mvp
 
 import com.common.base.mvp.BaseView
 import com.common.http.base.BaseResponse
@@ -15,7 +15,7 @@ import java.util.*
  */
 interface LoginContract {
     interface Model {
-        fun login(map: HashMap<String, ExampleBean>): Observable<BaseResponse<ExampleBean>>
+        fun login(map: HashMap<String, Any>): Observable<BaseResponse<ExampleBean>>
     }
 
     interface View : BaseView {
@@ -23,6 +23,6 @@ interface LoginContract {
     }
 
     interface Presenter {
-        fun login(map: HashMap<String, ExampleBean>)
+        fun login(map: HashMap<String, Any>)
     }
 }

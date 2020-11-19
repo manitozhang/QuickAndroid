@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.annotation.ColorRes
 import com.blankj.utilcode.util.ConvertUtils
 import com.common.R
+import kotlinx.android.synthetic.main.layout_toolbar.view.*
 
 /**
  * @Author: 张
@@ -22,23 +23,9 @@ import com.common.R
  * 自定义ToolBar
  */
 class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs) {
-    private var tvToolbarTitle: TextView? = null
-    private var tvToolbarRight: TextView? = null
-    private var tvToolbarLeft: TextView? = null
-    private var rlToolbarRoot: RelativeLayout? = null
-    private var ivToolbarRight: ImageView? = null
-    private var flToolbarRight: FrameLayout? = null
-    private var flToolbarLeft: FrameLayout? = null
-    private var viewDivider: View? = null
     private var onTitleClickListener: OnTitleClickListener? = null
     private var onLeftClickListener: OnLeftClickListener? = null
     private var onRightClickListener: OnRightClickListener? = null
-    private var ivToolbarLeft: ImageView? = null
-    private var rlRightView: RelativeLayout? = null
-    private var rlLeftView: RelativeLayout? = null
-    private var rlCenterView: RelativeLayout? = null
-    private var ivToolbarTitle: ImageView? = null
-    private var flToolbarTitle: FrameLayout? = null
     /**
      * 初始化视图数据
      *
@@ -47,20 +34,6 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      */
     fun initView(context: Context, attrs: AttributeSet) {
         val inflate = LayoutInflater.from(context).inflate(R.layout.layout_toolbar, this)
-        rlToolbarRoot = inflate.findViewById(R.id.rl_toolbar_root)
-        rlCenterView = inflate.findViewById(R.id.rl_center_view)
-        tvToolbarTitle = inflate.findViewById(R.id.tv_toolbar_title)
-        ivToolbarTitle = inflate.findViewById(R.id.iv_toolbar_title)
-        flToolbarTitle = inflate.findViewById(R.id.fl_toolbar_title)
-        rlLeftView = inflate.findViewById(R.id.rl_left_view)
-        tvToolbarLeft = inflate.findViewById(R.id.tv_toolbar_left)
-        ivToolbarLeft = inflate.findViewById(R.id.iv_toolbar_left)
-        flToolbarLeft = inflate.findViewById(R.id.fl_toolbar_left)
-        rlRightView = inflate.findViewById(R.id.rl_right_view)
-        tvToolbarRight = inflate.findViewById(R.id.tv_toolbar_right)
-        ivToolbarRight = inflate.findViewById(R.id.iv_toolbar_right)
-        flToolbarRight = inflate.findViewById(R.id.fl_toolbar_right)
-        viewDivider = inflate.findViewById(R.id.view_divider)
         //获取属性值
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CommonToolbar)
         //背景颜色类型
@@ -117,7 +90,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
         setTitleImgWidth(titleImgWidth)
         setTitleImgHeight(titleImgHeight)
         setTitleSize(ConvertUtils.px2sp(titleSize).toFloat())
-        tvToolbarTitle?.setTextColor(titleColor)
+        tv_toolbar_title?.setTextColor(titleColor)
         //设置左边布局类型
         setLeftViewType(leftType)
         //设置标题布局类型
@@ -129,23 +102,23 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
         setLeftImg(leftImg)
         setLeftImgWidth(leftImgWidth)
         setLeftImgHeight(leftImgHeight)
-        tvToolbarLeft?.setTextColor(leftTextColor)
+        tv_toolbar_left?.setTextColor(leftTextColor)
         setRightText(rightText)
         setRightTextSize(ConvertUtils.px2sp(rightTextSize).toFloat())
-        tvToolbarRight?.setTextColor(rightTextColor)
+        tv_toolbar_right?.setTextColor(rightTextColor)
         setRightImg(rightImg)
         setRightImgWidth(rightImgWidth)
         setRightImgHeight(rightImgHeight)
         //分割线是否显示
         setDividerIsVisiblity(dividerVisibility)
         //分隔线颜色
-        viewDivider?.setBackgroundColor(dividerColor)
+        view_divider?.setBackgroundColor(dividerColor)
         //左边View点击监听
-        rlLeftView?.setOnClickListener(OnClickListener { v: View? -> if (onLeftClickListener != null) onLeftClickListener!!.onLeftClick(v) })
+        rl_left_view?.setOnClickListener({ v: View? -> if (onLeftClickListener != null) onLeftClickListener!!.onLeftClick(v) })
         //标题View点击监听
-        rlCenterView?.setOnClickListener(OnClickListener { v: View? -> if (onTitleClickListener != null) onTitleClickListener!!.onTitleClick(v) })
+        rl_center_view?.setOnClickListener({ v: View? -> if (onTitleClickListener != null) onTitleClickListener!!.onTitleClick(v) })
         //右边View点击监听
-        rlRightView?.setOnClickListener(OnClickListener { v: View? -> if (onRightClickListener != null) onRightClickListener!!.onRightClick(v) })
+        rl_right_view?.setOnClickListener({ v: View? -> if (onRightClickListener != null) onRightClickListener!!.onRightClick(v) })
     }
 
     /**
@@ -154,7 +127,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param titleImg:
      */
     fun setTitleImg(titleImg: Int): CommonToolbar {
-        ivToolbarTitle!!.setImageDrawable(resources.getDrawable(titleImg))
+        iv_toolbar_title!!.setImageDrawable(resources.getDrawable(titleImg))
         return this
     }
 
@@ -165,7 +138,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @return
      */
     fun setBackgroundRes(bgRes: Int): CommonToolbar {
-        rlToolbarRoot!!.setBackgroundResource(bgRes)
+        rl_toolbar_root.setBackgroundResource(bgRes)
         return this
     }
 
@@ -175,9 +148,9 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param leftType :左边布局类型
      */
     fun setLeftViewType(leftType: Int) {
-        tvToolbarLeft!!.visibility = if (leftType == LEFT_TYPE_TEXT) View.VISIBLE else View.GONE
-        ivToolbarLeft!!.visibility = if (leftType == LEFT_TYPE_IMAGE) View.VISIBLE else View.GONE
-        flToolbarLeft!!.visibility = if (leftType == LEFT_TYPE_VIEW) View.VISIBLE else View.GONE
+        tv_toolbar_left!!.visibility = if (leftType == LEFT_TYPE_TEXT) View.VISIBLE else View.GONE
+        iv_toolbar_left!!.visibility = if (leftType == LEFT_TYPE_IMAGE) View.VISIBLE else View.GONE
+        fl_toolbar_left!!.visibility = if (leftType == LEFT_TYPE_VIEW) View.VISIBLE else View.GONE
     }
 
     /**
@@ -186,9 +159,9 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param titleType :左边布局类型
      */
     fun setTitleViewType(titleType: Int) {
-        tvToolbarTitle!!.visibility = if (titleType == TITLE_TYPE_TEXT) View.VISIBLE else View.GONE
-        ivToolbarTitle!!.visibility = if (titleType == TITLE_TYPE_IMAGE) View.VISIBLE else View.GONE
-        flToolbarTitle!!.visibility = if (titleType == TITLE_TYPE_VIEW) View.VISIBLE else View.GONE
+        tv_toolbar_title!!.visibility = if (titleType == TITLE_TYPE_TEXT) View.VISIBLE else View.GONE
+        iv_toolbar_title!!.visibility = if (titleType == TITLE_TYPE_IMAGE) View.VISIBLE else View.GONE
+        fl_toolbar_title!!.visibility = if (titleType == TITLE_TYPE_VIEW) View.VISIBLE else View.GONE
     }
 
     /**
@@ -197,9 +170,9 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param rightType :右边布局类型
      */
     fun setRightViewType(rightType: Int) {
-        tvToolbarRight!!.visibility = if (rightType == RIGHT_TYPE_TEXT) View.VISIBLE else View.GONE
-        ivToolbarRight!!.visibility = if (rightType == RIGHT_TYPE_IMAGE) View.VISIBLE else View.GONE
-        flToolbarRight!!.visibility = if (rightType == RIGHT_TYPE_VIEW) View.VISIBLE else View.GONE
+        tv_toolbar_right!!.visibility = if (rightType == RIGHT_TYPE_TEXT) View.VISIBLE else View.GONE
+        iv_toolbar_right!!.visibility = if (rightType == RIGHT_TYPE_IMAGE) View.VISIBLE else View.GONE
+        fl_toolbar_right!!.visibility = if (rightType == RIGHT_TYPE_VIEW) View.VISIBLE else View.GONE
     }
 
     /**
@@ -208,14 +181,14 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param isVisiblity:类型
      */
     fun setDividerIsVisiblity(isVisiblity: Int) {
-        viewDivider!!.visibility = if (isVisiblity == VIEW_GONE) View.GONE else View.VISIBLE
+        view_divider!!.visibility = if (isVisiblity == VIEW_GONE) View.GONE else View.VISIBLE
     }
 
     /**
      * 改变分隔线颜色
      */
     fun setDividerColor(@ColorRes dividerColor: Int) {
-        viewDivider!!.setBackgroundColor(resources.getColor(dividerColor))
+        view_divider!!.setBackgroundColor(resources.getColor(dividerColor))
     }
 
     /**
@@ -224,7 +197,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param title:标题
      */
     fun setTitle(title: String?): CommonToolbar {
-        tvToolbarTitle!!.text = title
+        tv_toolbar_title!!.text = title
         return this
     }
 
@@ -234,7 +207,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param titleSize:标题sp大小
      */
     fun setTitleSize(titleSize: Float): CommonToolbar {
-        tvToolbarTitle!!.textSize = titleSize
+        tv_toolbar_title!!.textSize = titleSize
         return this
     }
 
@@ -244,7 +217,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param titleColor:标题颜色
      */
     fun setTitleColor(titleColor: Int): CommonToolbar {
-        tvToolbarTitle!!.setTextColor(resources.getColor(titleColor))
+        tv_toolbar_title!!.setTextColor(resources.getColor(titleColor))
         return this
     }
 
@@ -255,10 +228,10 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      */
     fun setTitleImgWidth(titleImgWidth: Float): CommonToolbar {
         if (titleImgWidth == NONE_PROPERTY.toFloat()) return this
-        val layoutParams = ivToolbarTitle!!.layoutParams as LayoutParams
+        val layoutParams = iv_toolbar_title!!.layoutParams as LayoutParams
         //因为左右有给点击区域的padding所以加上两边的padding
         layoutParams.width = titleImgWidth.toInt() + ConvertUtils.dp2px(20f)
-        ivToolbarTitle!!.layoutParams = layoutParams
+        iv_toolbar_title!!.layoutParams = layoutParams
         return this
     }
 
@@ -269,9 +242,9 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      */
     fun setTitleImgHeight(rightImgHeight: Float): CommonToolbar {
         if (rightImgHeight == NONE_PROPERTY.toFloat()) return this
-        val layoutParams = ivToolbarTitle!!.layoutParams as LayoutParams
+        val layoutParams = iv_toolbar_title!!.layoutParams as LayoutParams
         layoutParams.height = rightImgHeight.toInt()
-        ivToolbarTitle!!.layoutParams = layoutParams
+        iv_toolbar_title!!.layoutParams = layoutParams
         return this
     }
 
@@ -281,8 +254,8 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param view:右边布局
      */
     fun setTitleView(view: View?): CommonToolbar {
-        flToolbarTitle!!.removeAllViews()
-        flToolbarTitle!!.addView(view)
+        fl_toolbar_title!!.removeAllViews()
+        fl_toolbar_title!!.addView(view)
         return this
     }
 
@@ -291,7 +264,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @return
      */
     val titleView: View?
-        get() = flToolbarTitle
+        get() = fl_toolbar_title
 
     /**
      * 设置左边图片
@@ -299,7 +272,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param leftImg:
      */
     fun setLeftImg(leftImg: Int): CommonToolbar {
-        ivToolbarLeft!!.setImageDrawable(resources.getDrawable(leftImg))
+        iv_toolbar_left!!.setImageDrawable(resources.getDrawable(leftImg))
         return this
     }
 
@@ -310,10 +283,10 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      */
     fun setLeftImgWidth(leftImgWidth: Float): CommonToolbar {
         if (leftImgWidth == NONE_PROPERTY.toFloat()) return this
-        val layoutParams = ivToolbarLeft!!.layoutParams as LayoutParams
+        val layoutParams = iv_toolbar_left!!.layoutParams as LayoutParams
         //因为左右有给点击区域的padding所以加上两边的padding
         layoutParams.width = leftImgWidth.toInt() + ConvertUtils.dp2px(20f)
-        ivToolbarLeft!!.layoutParams = layoutParams
+        iv_toolbar_left!!.layoutParams = layoutParams
         return this
     }
 
@@ -324,9 +297,9 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      */
     fun setLeftImgHeight(leftImgHeight: Float): CommonToolbar {
         if (leftImgHeight == NONE_PROPERTY.toFloat()) return this
-        val layoutParams = ivToolbarLeft!!.layoutParams as LayoutParams
+        val layoutParams = iv_toolbar_left!!.layoutParams as LayoutParams
         layoutParams.height = leftImgHeight.toInt()
-        ivToolbarLeft!!.layoutParams = layoutParams
+        iv_toolbar_left!!.layoutParams = layoutParams
         return this
     }
 
@@ -336,7 +309,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param leftText:左边文字
      */
     fun setLeftText(leftText: String?): CommonToolbar {
-        tvToolbarLeft!!.text = leftText
+        tv_toolbar_left!!.text = leftText
         return this
     }
 
@@ -346,7 +319,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param textSize:左边文字sp大小
      */
     fun setLeftTextSize(textSize: Float): CommonToolbar {
-        tvToolbarLeft!!.textSize = textSize
+        tv_toolbar_left!!.textSize = textSize
         return this
     }
 
@@ -356,7 +329,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param leftTextColor:左边文字
      */
     fun setLeftTextColor(leftTextColor: Int): CommonToolbar {
-        tvToolbarLeft!!.setTextColor(resources.getColor(leftTextColor))
+        tv_toolbar_left!!.setTextColor(resources.getColor(leftTextColor))
         return this
     }
 
@@ -366,8 +339,8 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param view:左边布局
      */
     fun setLeftView(view: View?): CommonToolbar {
-        flToolbarLeft!!.removeAllViews()
-        flToolbarLeft!!.addView(view)
+        fl_toolbar_left!!.removeAllViews()
+        fl_toolbar_left!!.addView(view)
         return this
     }
 
@@ -376,7 +349,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @return
      */
     val leftView: View?
-        get() = flToolbarRight
+        get() = fl_toolbar_right
 
     /**
      * 设置右边文字
@@ -384,7 +357,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param rightText:右边文字
      */
     fun setRightText(rightText: String?): CommonToolbar {
-        tvToolbarRight!!.text = rightText
+        tv_toolbar_right!!.text = rightText
         return this
     }
 
@@ -394,7 +367,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param textSize:右边文字sp大小
      */
     fun setRightTextSize(textSize: Float): CommonToolbar {
-        tvToolbarRight!!.textSize = textSize
+        tv_toolbar_right!!.textSize = textSize
         return this
     }
 
@@ -404,7 +377,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param rightTextColor:右边文字颜色
      */
     fun setRightTextColor(rightTextColor: Int): CommonToolbar {
-        tvToolbarRight!!.setTextColor(resources.getColor(rightTextColor))
+        tv_toolbar_right!!.setTextColor(resources.getColor(rightTextColor))
         return this
     }
 
@@ -414,7 +387,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param rightImg:
      */
     fun setRightImg(rightImg: Int): CommonToolbar {
-        ivToolbarRight!!.setImageDrawable(resources.getDrawable(rightImg))
+        iv_toolbar_right!!.setImageDrawable(resources.getDrawable(rightImg))
         return this
     }
 
@@ -425,10 +398,10 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      */
     fun setRightImgWidth(rightImgWidth: Float): CommonToolbar {
         if (rightImgWidth == NONE_PROPERTY.toFloat()) return this
-        val layoutParams = ivToolbarRight!!.layoutParams as LayoutParams
+        val layoutParams = iv_toolbar_right!!.layoutParams as LayoutParams
         //因为左右有给点击区域的padding所以加上两边的padding
         layoutParams.width = rightImgWidth.toInt() + ConvertUtils.dp2px(20f)
-        ivToolbarRight!!.layoutParams = layoutParams
+        iv_toolbar_right!!.layoutParams = layoutParams
         return this
     }
 
@@ -439,9 +412,9 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      */
     fun setRightImgHeight(rightImgHeight: Float): CommonToolbar {
         if (rightImgHeight == NONE_PROPERTY.toFloat()) return this
-        val layoutParams = ivToolbarRight!!.layoutParams as LayoutParams
+        val layoutParams = iv_toolbar_right!!.layoutParams as LayoutParams
         layoutParams.height = rightImgHeight.toInt()
-        ivToolbarRight!!.layoutParams = layoutParams
+        iv_toolbar_right!!.layoutParams = layoutParams
         return this
     }
 
@@ -451,8 +424,8 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @param view:右边布局
      */
     fun setRightView(view: View?): CommonToolbar {
-        flToolbarRight!!.removeAllViews()
-        flToolbarRight!!.addView(view)
+        fl_toolbar_right!!.removeAllViews()
+        fl_toolbar_right!!.addView(view)
         return this
     }
 
@@ -461,7 +434,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
      * @return
      */
     val rightView: View?
-        get() = flToolbarRight
+        get() = fl_toolbar_right
 
     /**
      * 左边按钮监听
@@ -484,7 +457,7 @@ class CommonToolbar(context: Context, attrs: AttributeSet) : RelativeLayout(cont
         fun onRightClick(v: View?)
     }
 
-    fun setOnLeftClickListener(onLeftClickListener: OnLeftClickListener?): CommonToolbar {
+    fun setOnLeftClickListener(onLeftClickListener: OnLeftClickListener): CommonToolbar {
         this.onLeftClickListener = onLeftClickListener
         return this
     }

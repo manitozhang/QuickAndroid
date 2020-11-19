@@ -1,4 +1,4 @@
-package com.library.testmvp.mvp
+package com.library.login.mvp
 
 import com.common.http.XRetrofit.api
 import com.common.http.base.BaseResponse
@@ -15,7 +15,7 @@ import java.util.*
  * @Desc:
  */
 class LoginModel : LoginContract.Model {
-    override fun login(map: HashMap<String, ExampleBean>): Observable<BaseResponse<ExampleBean>> {
-        return api!!.example3(getRequestBody(map))
+    override fun login(map: HashMap<String, Any>): Observable<BaseResponse<ExampleBean>> {
+        return api!!.testLogin(getRequestBody(map))
     }
 }

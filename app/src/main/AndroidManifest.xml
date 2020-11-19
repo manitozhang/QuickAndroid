@@ -12,7 +12,7 @@
         <activity android:name=".lazyload.LazyLoadActivity" />
         <activity android:name=".mainpage.MainPageActivity" />
         <activity android:name=".http.HttpSampleActivity" />
-        <activity android:name=".testmvp.LoginActivity" />
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

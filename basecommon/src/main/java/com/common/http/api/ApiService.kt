@@ -81,8 +81,8 @@ interface ApiService {
      *
      * @return
      */
-    @POST("example/3")
-    fun example3(@Body body: RequestBody?): Observable<BaseResponse<ExampleBean>>
+    @POST("api/postJson")
+    fun testLogin(@Body body: RequestBody?): Observable<BaseResponse<ExampleBean>>
 
     /**
      * 获取集合

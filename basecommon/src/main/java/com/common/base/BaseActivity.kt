@@ -7,7 +7,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.common.library.eventbus.EventBus
+import org.greenrobot.eventbus.EventBus
 
 /**
  * @Author: 张鹏飞

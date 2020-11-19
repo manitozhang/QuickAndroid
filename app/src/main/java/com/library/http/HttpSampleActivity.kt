@@ -23,21 +23,16 @@ import com.common.http.helper.upload.UploadFileHelper
 import com.common.util.GetPathFromUri.getRealPathFromUri
 import com.common.util.ParamUtil.getEditStr
 import com.library.R
+import kotlinx.android.synthetic.main.activity_http_sample.*
 
 /**
  * 网络相关操作的类
  */
 class HttpSampleActivity : BaseActivity() {
-    private var etPassword: EditText? = null
-    private var etUsername: EditText? = null
-    private var tvResultData: TextView? = null
     override val layout: Int
         get() = R.layout.activity_http_sample
 
     override fun initViewIds() {
-        etUsername = findViewById(R.id.et_username)
-        etPassword = findViewById(R.id.et_password)
-        tvResultData = findViewById(R.id.tv_result_data)
     }
 
     override fun initView() {}
@@ -48,10 +43,12 @@ class HttpSampleActivity : BaseActivity() {
      * @param view
      */
     fun btnGet(view: View?) {
-        api!!.testGet(commonParamsMap(getEditStr(etUsername!!), getEditStr(etPassword!!)))
+        api!!.testGet(commonParamsMap(getEditStr(et_username!!), getEditStr(et_password!!)))
                 ?.compose(observeOnMainThread())
-                ?.subscribe({ list ->
-                    renderResultView("data数据为:\n$list")
+                ?.subscribe(object :BaseObserver<ExampleBean>(){
+                    override fun onSuccess(response: ExampleBean) {
+                        renderResultView("data数据为:\n$response")
+                    }
                 })
     }
 
@@ -61,10 +58,13 @@ class HttpSampleActivity : BaseActivity() {
      * @param view
      */
     fun btnPost(view: View?) {
-        api!!.testPost(commonParamsMap(getEditStr(etUsername!!), getEditStr(etPassword!!)))
+        api!!.testPost(commonParamsMap(getEditStr(et_username!!), getEditStr(et_password!!)))
                 ?.compose(observeOnMainThread())
-                ?.subscribe({ response ->
-                    renderResultView("data无数据,总数据为:\n$response")
+                ?.subscribe(object :BaseObserver<Any>(){
+                    override fun onSuccess(response: Any) {
+                        renderResultView("data无数据,总数据为:\n$response")
+                    }
+
                 })
     }
 
@@ -74,7 +74,7 @@ class HttpSampleActivity : BaseActivity() {
      * @param view
      */
     fun btnPut(view: View?) {
-        api!!.testPut(commonParamsMap(getEditStr(etUsername!!), getEditStr(etPassword!!)))
+        api!!.testPut(commonParamsMap(getEditStr(et_username!!), getEditStr(et_password!!)))
                 ?.compose(observeOnMainThread())
                 ?.subscribe(object : BaseObserver<Any>() {
 
@@ -95,7 +95,7 @@ class HttpSampleActivity : BaseActivity() {
      * @param view
      */
     fun btnDelete(view: View?) {
-        api?.testDelete(commonParamsMap(getEditStr(etUsername!!), getEditStr(etPassword!!)))
+        api?.testDelete(commonParamsMap(getEditStr(et_username!!), getEditStr(et_password!!)))
                 ?.compose(observeOnMainThread())
                 ?.subscribe(object : BaseObserver<ExampleBean>() {
 
@@ -115,7 +115,7 @@ class HttpSampleActivity : BaseActivity() {
      * @param view
      */
     fun btnPostJson(view: View?) {
-        api?.testPostJson(getRequestBody(commonParamsMap(getEditStr(etUsername!!), getEditStr(etPassword!!))))
+        api?.testPostJson(getRequestBody(commonParamsMap(getEditStr(et_username!!), getEditStr(et_password!!))))
                 ?.compose(observeOnMainThread())
                 ?.subscribe(object : BaseObserver<ExampleBean>() {
                     override fun onSuccess(response: ExampleBean) {
@@ -193,6 +193,6 @@ class HttpSampleActivity : BaseActivity() {
      * @param str
      */
     private fun renderResultView(str: String) {
-        tvResultData!!.text = str
+        tv_result_data!!.text = str
     }
 }

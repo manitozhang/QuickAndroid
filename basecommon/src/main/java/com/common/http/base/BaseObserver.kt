@@ -50,7 +50,7 @@ abstract class BaseObserver<T> : Observer<BaseResponse<T>> {
 
     override fun onNext(response: BaseResponse<T>) {
         loadingDialog?.dismiss()
-        response.data?.let { onSuccess(it) }
+        response.let { onSuccess(it) }
         if (response.isSuccess) {
             response.data?.let { onSuccess(it) }
         } else {

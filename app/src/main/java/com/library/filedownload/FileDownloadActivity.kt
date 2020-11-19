@@ -11,23 +11,17 @@ import com.common.http.helper.filedownload.FileDownloadHelper
 import com.common.http.helper.filedownload.OnDownloadListener
 import com.common.util.BitmapUtil.fileStoragePath
 import com.library.R
+import kotlinx.android.synthetic.main.activity_file_download.*
 
 /**
  * 文件下载页面
  */
 class FileDownloadActivity : BaseActivity() {
-    private val ids = 0
-    private var progressBar: ProgressBar? = null
-    private var tvProgress: TextView? = null
-    private var tvSpeed: TextView? = null
     private var fileDownloadHelper: FileDownloadHelper? = null
     override val layout: Int
         get() = R.layout.activity_file_download
 
     override fun initViewIds() {
-        progressBar = findViewById(R.id.progress_bar)
-        tvProgress = findViewById(R.id.tv_progress)
-        tvSpeed = findViewById(R.id.tv_speed)
     }
 
     override fun initView() {}
@@ -49,10 +43,10 @@ class FileDownloadActivity : BaseActivity() {
         fileDownloadHelper!!.downloadFile(fileUrl, fileStoragePath, false, object : OnDownloadListener {
             override fun onPending(id: Int, soFarBytes: Int, totalBytes: Int) {}
             override fun onProgress(id: Int, speed: Int, soFarBytes: Int, totalBytes: Int) {
-                tvProgress!!.text = "$soFarBytes / $totalBytes"
-                tvSpeed!!.text = "$speed KB/s"
-                progressBar!!.max = totalBytes
-                progressBar!!.progress = soFarBytes
+                tv_progress!!.text = "$soFarBytes / $totalBytes"
+                tv_speed!!.text = "$speed KB/s"
+                progress_bar!!.max = totalBytes
+                progress_bar!!.progress = soFarBytes
             }
 
             override fun onComplete(path: String?) {

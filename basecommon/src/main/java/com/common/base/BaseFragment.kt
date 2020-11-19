@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
-import com.common.library.eventbus.EventBus
-import com.common.library.eventbus.Subscribe
-import java.util.*
+import org.greenrobot.eventbus.EventBus
+import org.greenrobot.eventbus.Subscribe
 
 /**
  * @Author: 张鹏飞

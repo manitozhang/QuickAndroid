@@ -7,7 +7,7 @@ package com.common.base.mvp
  *
  * @Desc: Presenter基类
  */
-open class BasePresenter<V : BaseView?> {
+open class BasePresenter<V : BaseView> {
     @JvmField
     protected var mView: V? = null
     /**
@@ -22,7 +22,7 @@ open class BasePresenter<V : BaseView?> {
     /**
      * 解绑View 一般在destroy调用
      */
-    fun detachView() {
+    open fun detachView() {
         mView = null
     }
 

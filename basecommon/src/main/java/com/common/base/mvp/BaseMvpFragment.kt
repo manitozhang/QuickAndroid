@@ -16,7 +16,7 @@ import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider
 abstract class BaseMvpFragment<T : BasePresenter<*>?> : BaseFragment(), BaseView {
     private val mPresenter: T? = null
     override fun onDestroyView() {
-        if (mPresenter != null && mPresenter.isViewAttached()) mPresenter.detachView()
+        if (mPresenter != null && mPresenter.isViewAttached) mPresenter.detachView()
         super.onDestroyView()
     }
 

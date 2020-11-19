@@ -76,7 +76,7 @@ class CompressHelper private constructor(context: Context) {
     fun compressToFile(file: File?): File {
         return BitmapUtil.compressImage(context, Uri.fromFile(file), maxWidth, maxHeight,
                 compressFormat, bitmapConfig, quality, destinationDirectoryPath,
-                fileNamePrefix, fileName)
+                fileNamePrefix!!, fileName!!)
     }
 
     /**
@@ -86,7 +86,7 @@ class CompressHelper private constructor(context: Context) {
      * @return 压缩后的Bitmap
      */
     fun compressToBitmap(file: File?): Bitmap {
-        return BitmapUtil.getScaledBitmap(context, Uri.fromFile(file), maxWidth, maxHeight, bitmapConfig)
+        return BitmapUtil.getScaledBitmap(context, Uri.fromFile(file), maxWidth, maxHeight, bitmapConfig)!!
     }
 
     /**

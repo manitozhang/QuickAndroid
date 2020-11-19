@@ -22,8 +22,8 @@ import java.io.*
  * 压缩 bitmap与file的互转 获取图片尺寸
  */
 object BitmapUtil {
-    fun getScaledBitmap(context: Context?, imageUri: Uri?, maxWidth: Float, maxHeight: Float, bitmapConfig: Bitmap.Config?): Bitmap? {
-        val filePath = FileUtil.getRealPathFromURI(context, imageUri)
+    fun getScaledBitmap(context: Context?, imageUri: Uri, maxWidth: Float, maxHeight: Float, bitmapConfig: Bitmap.Config?): Bitmap? {
+        val filePath = context?.let { FileUtil.getRealPathFromURI(it, imageUri) }
         var scaledBitmap: Bitmap? = null
         val options = BitmapFactory.Options()
         options.inJustDecodeBounds = true
