@@ -9,3 +9,8 @@
 + 新增列表刷新加载
 + 新增列表单选示例
 + 新增列表多选,反选示例
+
+
+## 2020/11/19
++ 新增Mvp示例使用 [Kotlin版本](https://github.com/manitozhang/QuickAndroid/blob/kotlin/app/src/main/java/com/library/login/LoginActivity.kt)   [Java版本](https://github.com/manitozhang/QuickAndroid/blob/java/app/src/main/java/com/library/login/LoginActivity.java)
++ 新增Kotlin版本 [点击查看](https://github.com/manitozhang/QuickAndroid/tree/kotlin)
