@@ -14,6 +14,12 @@
         android:text="首页框架" />
 
     <Button
+        android:onClick="btnMvp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mvp示例" />
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="btnMvp"
