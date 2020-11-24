@@ -168,7 +168,7 @@ public abstract class BaseFragment extends Fragment {
 
     /**
      * 是否使用懒加载,默认false
-     * 使用拦截在,如果是viewpager,需要写 viewPager.setlimit(fragment.size())
+     * 使用懒加载 必须实现  需要配合viewpager.setOffscreenPageLimit(fragment.size)方法,有多少个就写几个
      *
      * @return
      */
