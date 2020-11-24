@@ -176,7 +176,7 @@ public class CommonToolbar extends RelativeLayout {
         //设置左边布局类型
         setLeftViewType(leftType);
         //设置标题布局类型
-        setLeftViewType(titleType);
+        setTitleViewType(titleType);
         //设置右边布局类型
         setRightViewType(rightType);
 
