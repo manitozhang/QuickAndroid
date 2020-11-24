@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LibraryCollection</string>
+    <string name="app_name">QuickAndroid</string>
 
 
     <string name="error_net">您当前的网络连接不可用</string>
