@@ -60,9 +60,9 @@ public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
     public void onNext(BaseResponse<T> response) {
         if (loadingDialog != null)
             loadingDialog.dismiss();
-        onSuccess(response.getData());
+        onSuccess(response);
         if (response.isSuccess()) {
-            onSuccess(response);
+            onSuccess(response.getData());
         } else {
             ToastUtils.showShort(response.getMsg());
         }
