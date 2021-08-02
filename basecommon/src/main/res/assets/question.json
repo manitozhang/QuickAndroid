@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "一.以下谁叫小红",
+      "rightAnswer": 1,
+      "answer": [
+        {
+          "id": 1,
+          "answer": "小红"
+        },
+        {
+          "id": 2,
+          "answer": "小明"
+        },
+        {
+          "id": 3,
+          "answer": "小张"
+        }
+      ],
+      "typeDesc": "单选",
+      "type": "1"
+    },
+    {
+      "id": 2,
+      "title": "二.以下谁姓张",
+      "rightAnswer": "1,4",
+      "answer": [
+        {
+          "id": 1,
+          "answer": "张三"
+        },
+        {
+          "id": 2,
+          "answer": "赵四"
+        },
+        {
+          "id": 3,
+          "answer": "王五"
+        },
+        {
+          "id": 4,
+          "answer": "张龙"
+        }
+      ],
+      "typeDesc": "多选",
+      "type": "2"
+    },
+    {
+      "id": 3,
+      "title": "三.以下哪个动物会汪汪叫",
+      "rightAnswer": 1,
+      "answer": [
+        {
+          "id": 1,
+          "answer": "小狗"
+        },
+        {
+          "id": 2,
+          "answer": "小猫"
+        },
+        {
+          "id": 3,
+          "answer": "小猪"
+        }
+      ],
+      "typeDesc": "单选",
+      "type": "1"
+    },
+    {
+      "id": 4,
+      "title": "四.以下什么动物是水里游的",
+      "rightAnswer": "2,3,4",
+      "answer": [
+        {
+          "id": 1,
+          "answer": "奶牛"
+        },
+        {
+          "id": 2,
+          "answer": "金鱼"
+        },
+        {
+          "id": 3,
+          "answer": "鲸鱼"
+        },
+        {
+          "id": 4,
+          "answer": "海豚"
+        }
+      ],
+      "typeDesc": "多选",
+      "type": "2"
+    }
+  ]
+}
