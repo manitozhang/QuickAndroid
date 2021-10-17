@@ -1,10 +1,11 @@
-# QuickAndroid Android快速开发框(持续更新中)
+# QuickAndroid Android-Java快速开发框(持续更新中)
 
 ## [更新日志](https://github.com/manitozhang/QuickAndroid/blob/master/README-UPDATE.md)
 
-## [Java版本](https://github.com/manitozhang/QuickAndroid/tree/java)           [Kotlin版本](https://github.com/manitozhang/QuickAndroid/tree/kotlin)
+## [kotlin版本点击](https://github.com/manitozhang/QuickAndroid/tree/kotlin)
 
 ## [项目用到的开源库以及地址](https://github.com/manitozhang/QuickAndroid/blob/master/README-LIBRARY.md)
+
 
 ## 各位小伙伴如果想到有什么常用到的可以联系我添加
 1. 可以提交issus
