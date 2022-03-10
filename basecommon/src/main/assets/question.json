@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "title": "一.以下谁叫小红",
+      "title": "一、以下谁叫小红",
       "rightAnswer": 1,
       "answer": [
         {
@@ -19,11 +19,11 @@
         }
       ],
       "typeDesc": "单选",
-      "type": "1"
+      "type": 1
     },
     {
       "id": 2,
-      "title": "二.以下谁姓张",
+      "title": "二、以下谁姓张",
       "rightAnswer": "1,4",
       "answer": [
         {
@@ -44,11 +44,11 @@
         }
       ],
       "typeDesc": "多选",
-      "type": "2"
+      "type": 2
     },
     {
       "id": 3,
-      "title": "三.以下哪个动物会汪汪叫",
+      "title": "三、以下哪个动物会汪汪叫",
       "rightAnswer": 1,
       "answer": [
         {
@@ -65,11 +65,11 @@
         }
       ],
       "typeDesc": "单选",
-      "type": "1"
+      "type": 1
     },
     {
       "id": 4,
-      "title": "四.以下什么动物是水里游的",
+      "title": "四、以下什么动物是水里游的",
       "rightAnswer": "2,3,4",
       "answer": [
         {
@@ -90,7 +90,15 @@
         }
       ],
       "typeDesc": "多选",
-      "type": "2"
+      "type": 2
+    },
+    {
+      "id": 5,
+      "title": "五、你爱吃什么水果",
+      "rightAnswer": "",
+      "answer": [],
+      "typeDesc": "填空",
+      "type": 3
     }
   ]
 }

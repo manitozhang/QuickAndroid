@@ -16,6 +16,7 @@ import com.library.list.refreshload.RefreshLoadListActivity;
 import com.library.list.singlechoice.SingleChoiceListActivity;
 import com.library.login.LoginActivity;
 import com.library.mainpage.MainPageActivity;
+import com.library.question.QuestionActivity;
 import com.library.toolbar.CommonToolbarActivity;
 
 public class MainActivity extends BaseActivity {
@@ -118,5 +119,13 @@ public class MainActivity extends BaseActivity {
      */
     public void btnMvp(View view) {
         startActivity(new Intent(this , LoginActivity.class));
+    }
+
+    /**
+     * 答题页面
+     * @param view
+     */
+    public void btnQuestion(View view) {
+        startActivity(new Intent(this , QuestionActivity.class));
     }
 }

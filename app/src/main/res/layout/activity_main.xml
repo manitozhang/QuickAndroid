@@ -76,4 +76,10 @@
             android:text="列表多选" />
     </LinearLayout>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnQuestion"
+        android:text="答题页面" />
+
 </LinearLayout>
